@@ -12,32 +12,34 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :company_name %><br>
-    <%= f.text_field :company_name %>
+    <%# f.label :company_name %><br>
+    <%= f.text_field :company_name, placeholder: "company name" %>
   </div>
   <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
+    <%# f.label :description %><br>
+    <%= f.text_area :description, placeholder: "100 character description" %>
   </div>
   <div class="field">
-    <%= f.label :user_position %><br>
-    <%= f.text_field :user_position %>
+    <%# f.label :user_position %><br>
+    <%= f.text_field :user_position, placeholder: "user position" %>
   </div>
   <div class="field">
     <%= f.label :type_of_business %><br>
-    <%= f.text_field :type_of_business %>
+    <%# f.text_field :type_of_business %>
+    <%= f.select :type_of_business, options_for_select(Profile::BUSINESS_TYPES) %><br>
+  </div>
+  <!-- <div class="field"> -->
+    <!-- <%# f.label :category %><br> -->
+    <%# f.text_field :category %>
+  <!-- </div> -->
+  <div class="field">
+    <%# f.label :city %><br>
+    <%= f.text_field :city, placeholder: "city" %>
   </div>
   <div class="field">
-    <%= f.label :category %><br>
-    <%= f.text_field :category %>
-  </div>
-  <div class="field">
-    <%= f.label :city %><br>
-    <%= f.text_field :city %>
-  </div>
-  <div class="field">
-    <%= f.label :state %><br>
-    <%= f.text_field :state %>
+    <%# f.label :state %>    
+    <%= f.select :state, options_for_select(@profile.us_states, "FL") %><br>
+    <%# f.text_field :state %>
   </div>
   <div class="actions">
     <%= f.submit %>
