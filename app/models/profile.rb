@@ -1,5 +1,7 @@
 class Profile < ActiveRecord::Base
 
+  belongs_to :user
+
   BUSINESS_TYPES=[['technology'], ['retail'], ['services'], ['restaurant']]
   
   def us_states
