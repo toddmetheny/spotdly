@@ -14,7 +14,11 @@ class ProfilesController < ApplicationController
 
   # GET /profiles/new
   def new
-    @profile = Profile.new
+    if current_user
+      @profile = Profile.new
+    else
+      redirect_to new_user_registration_path
+    end
   end
 
   # GET /profiles/1/edit
@@ -25,6 +29,7 @@ class ProfilesController < ApplicationController
   # POST /profiles.json
   def create
     @profile = Profile.new(profile_params)
+    @profile.user_id = current_user.id
 
     respond_to do |format|
       if @profile.save
