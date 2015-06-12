@@ -40,7 +40,7 @@
 <% @comments = Comment.where(:profile_id => @profile.id) %>
 <% @comments.each do |c| %>
   <%= c.description %>
-  <%= User.find(c.user_id).email %>
+  <%= User.find(c.user_id).name %><br>
 <% end %>
 
 
