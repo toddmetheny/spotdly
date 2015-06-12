@@ -1,37 +1,13 @@
-<h1>Listing profiles</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Company name</th>
-      <th>Description</th>
-      <th>User position</th>
-      <th>Type of business</th>
-      <th>Category</th>
-      <th>City</th>
-      <th>State</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @profiles.each do |profile| %>
-      <tr>
-        <td><%= profile.company_name %></td>
-        <td><%= profile.description %></td>
-        <td><%= profile.user_position %></td>
-        <td><%= profile.type_of_business %></td>
-        <td><%= profile.category %></td>
-        <td><%= profile.city %></td>
-        <td><%= profile.state %></td>
-        <td><%= link_to 'Show', profile %></td>
-        <td><%= link_to 'Edit', edit_profile_path(profile) %></td>
-        <td><%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+<%# render 'layouts/heading' %>
+<%= link_to 'Create a Brand', new_profile_path %>
+<h1 class="text-center">Discover Brands</h1>
+  <% @profiles.each do |profile| %>
+    <%= link_to profile do %>
+      <div class="col-md-2">
+        <%= image_tag profile.background_image, class: 'background-image-thumbnail' %>
+        <%= profile.description %>
+        <%= image_tag profile.logo, class: 'logo-thumbnail' %>
+        <%= profile.company_name %>
+      </div>
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Profile', new_profile_path %>
+  <% end %>

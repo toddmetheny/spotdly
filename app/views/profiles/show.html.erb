@@ -35,14 +35,6 @@
   <%= @profile.state %>
 </p>
 
-<%= render 'comments/form' %>
-
-<% @comments = Comment.where(:profile_id => @profile.id) %>
-<% @comments.each do |c| %>
-  <%= c.description %>
-  <%= User.find(c.user_id).name %><br>
-<% end %>
-
 <p>
   <strong>Logo:</strong>
   <%= image_tag @profile.logo.to_s %>
@@ -56,3 +48,11 @@
 
 <%= link_to 'Edit', edit_profile_path(@profile) %> |
 <%= link_to 'Back', profiles_path %>
+
+<%= render 'comments/form' %>
+
+<% @comments = Comment.where(:profile_id => @profile.id) %>
+<% @comments.each do |c| %>
+  <%= c.description %>
+  <%= User.find(c.user_id).name %><br>
+<% end %>
