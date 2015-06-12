@@ -19,4 +19,5 @@ group :production do
 end
 
 gem 'devise'
+gem 'rmagick'
 gem 'carrierwave'
