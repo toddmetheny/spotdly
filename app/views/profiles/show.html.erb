@@ -35,5 +35,14 @@
   <%= @profile.state %>
 </p>
 
+<%= render 'comments/form' %>
+
+<% @comments = Comment.where(:profile_id => @profile.id) %>
+<% @comments.each do |c| %>
+  <%= c.description %>
+  <%= User.find(c.user_id).email %>
+<% end %>
+
+
 <%= link_to 'Edit', edit_profile_path(@profile) %> |
 <%= link_to 'Back', profiles_path %>
