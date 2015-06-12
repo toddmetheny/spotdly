@@ -36,6 +36,12 @@
   <div class="field">
     <%= f.select :state, options_for_select(@profile.us_states, "FL") %><br>
   </div>
+  <div>
+    <%= f.file_field :logo %>
+  </div>
+   <div>
+    <%= f.file_field :background_image %>
+  </div>
 
   <div class="actions">
     <%= f.submit %>

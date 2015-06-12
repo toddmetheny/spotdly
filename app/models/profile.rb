@@ -1,9 +1,11 @@
 class Profile < ActiveRecord::Base
+   mount_uploader :logo, LogoUploader
+   mount_uploader :background_image, BackgroundImageUploader
 
   belongs_to :user
 
   BUSINESS_TYPES=[['technology'], ['retail'], ['services'], ['restaurant']]
-  
+
   def us_states
     [
       ['Alabama', 'AL'],

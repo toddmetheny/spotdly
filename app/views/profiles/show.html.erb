@@ -43,6 +43,16 @@
   <%= User.find(c.user_id).name %><br>
 <% end %>
 
+<p>
+  <strong>Logo:</strong>
+  <%= image_tag @profile.logo.to_s %>
+</p>
+
+<p>
+  <strong>Background Image:</strong>
+  <%= image_tag @profile.background_image.to_s %>
+</p>
+
 
 <%= link_to 'Edit', edit_profile_path(@profile) %> |
 <%= link_to 'Back', profiles_path %>
