@@ -12,39 +12,55 @@
   <% end %>
 
   <div class="field">
-    <br>
     <%= f.text_field :company_name, placeholder: "company name" %>
   </div>
+
   <div class="field">
-    <br>
-    <%= f.text_area :description, placeholder: "100 character description" %>
-  </div>
-  <div class="field">
-    <br>
     <%= f.text_field :user_position, placeholder: "user position" %>
   </div>
+
+  <div class="field">
+    <%= f.label "Brand Concept: Describe your Brand concept in 100 characters" %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div>
+  <%= f.label "Background Image: Background images must be in PNG, GIF, or JPG format" %>
+  <%= f.file_field :background_image %>
+  </div>
+
+   <div>
+    <%= f.label 'Logo' %>
+    <%= f.file_field :logo %>
+  </div>
+
+  <div>
+    Brand Idea
+  </div>
+
+  <div>
+    Brand Idea
+  </div>
+
   <div class="field">
     <%= f.label :type_of_business %><br>
     <%= f.select :type_of_business, options_for_select(Profile::BUSINESS_TYPES) %><br>
   </div>
+
     <%# f.label :category %>
     <%# f.text_field :category %>
   <div class="field">
-    <br>
     <%= f.text_field :city, placeholder: "city" %>
   </div>
+
   <div class="field">
-    <%= f.select :state, options_for_select(@profile.us_states, "FL") %><br>
-  </div>
-  <div>
-    <%= f.file_field :logo %>
-  </div>
-   <div>
-    <%= f.file_field :background_image %>
+    <%= f.select :state, options_for_select(@profile.us_states, "FL") %>
   </div>
 
+
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Create A Brand Profile' %>
   </div>
 
 

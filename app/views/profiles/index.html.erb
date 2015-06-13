@@ -3,7 +3,7 @@
 <h1 class="text-center">Discover Brands</h1>
   <% @profiles.each do |profile| %>
     <%= link_to profile do %>
-      <div class="col-md-2">
+      <div class="col-md-2 brand-thumbnail">
         <%= image_tag profile.background_image, class: 'background-image-thumbnail' %>
         <%= profile.description %>
         <%= image_tag profile.logo, class: 'logo-thumbnail' %>

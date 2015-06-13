@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+
+ /*
+BLACK #000000
+YELLOW #fef500
+GREY TEXT #7a8285
+GREY #cdd0d8
+*/
+
+ @font-face {
+        font-family: "Proxima Nova";
+        src: url(assets/fonts/ProximaNovaAlt-Light.otf) format("truetype");
+    }
+
+body {
+  font-family: "Proxima Nova";
+}
