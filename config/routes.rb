@@ -3,7 +3,12 @@ Rails.application.routes.draw do
 
   # devise_for :users
   devise_for :users, path_names: {sign_in: "login", sign_out: "logout"}
-  resources :profiles
+  resources :profiles do
+    member do
+      put "like", to: "profiles#match"
+      # put "dislike", to: "profiles#downvote"
+    end
+  end
 
   root 'profiles#index'
 
