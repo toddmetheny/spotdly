@@ -1,5 +1,12 @@
 <p id="notice"><%= notice %></p>
 
+<div>
+  Matches: <%= @profile.votes_for.size %>
+  <%= link_to "Match", like_profile_path(@profile), method: :put %>
+  <%# link_to "Downvote", dislike_profile_path(@profile), method: :put %>
+</div>
+
+
 <p>
   <strong>Company name:</strong>
   <%= @profile.company_name %>
