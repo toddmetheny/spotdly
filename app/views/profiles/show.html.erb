@@ -1,58 +1,60 @@
 <p id="notice"><%= notice %></p>
-
 <p>
-  <strong>Company name:</strong>
-  <%= @profile.company_name %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @profile.description %>
-</p>
-
-<p>
-  <strong>User position:</strong>
-  <%= @profile.user_position %>
-</p>
-
-<p>
-  <strong>Type of business:</strong>
-  <%= @profile.type_of_business %>
-</p>
-
-<p>
-  <strong>Category:</strong>
-  <%= @profile.category %>
-</p>
-
-<p>
-  <strong>City:</strong>
-  <%= @profile.city %>
-</p>
-
-<p>
-  <strong>State:</strong>
-  <%= @profile.state %>
-</p>
-
-<p>
-  <strong>Logo:</strong>
-  <%= image_tag @profile.logo.to_s %>
-</p>
-
-<p>
-  <strong>Background Image:</strong>
   <%= image_tag @profile.background_image.to_s %>
 </p>
 
+<p class="text-center">
+  <%= image_tag @profile.logo.to_s %>
+</p>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <h1><%= @profile.company_name %></h1>
+      <p>
+        <strong>Description:</strong>
+        <%= @profile.description %>
+      </p>
+      <p>
+        <strong>Type of business:</strong>
+        <%= @profile.type_of_business %>
+      </p>
+      <p>
+        <strong>Category:</strong>
+        <%= @profile.category %>
+      </p>
+    </div>
+
+    <div class="col-md-4">
+       <p>
+        <strong>City:</strong>
+        <%= @profile.city %>
+      </p>
+
+      <p>
+        <strong>State:</strong>
+        <%= @profile.state %>
+      </p>
+    </div>
+
+    <div class="col-md-4">
+
+
+    </div>
+
+    <div class="col-md-12">
+      <%= render 'comments/form' %>
+
+      <% @comments = Comment.where(:profile_id => @profile.id) %>
+      <% @comments.each do |c| %>
+        <%= c.description %>
+        <%= User.find(c.user_id).name %><br>
+      <% end %>
+    </div>
+   </div>
+</div>
 
 <%= link_to 'Edit', edit_profile_path(@profile) %> |
 <%= link_to 'Back', profiles_path %>
 
-<%= render 'comments/form' %>
 
-<% @comments = Comment.where(:profile_id => @profile.id) %>
-<% @comments.each do |c| %>
-  <%= c.description %>
-  <%= User.find(c.user_id).name %><br>
-<% end %>

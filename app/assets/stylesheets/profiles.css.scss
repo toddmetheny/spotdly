@@ -2,6 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+h1 {
+  text-align: center;
+}
 .background-image-thumbnail {
   position: static;
   width: 200px;
@@ -9,8 +12,14 @@
 
 .logo-thumbnail {
   width: 50px;
+  border-radius: 50%;
 }
 
 .brand-thumbnail {
   border: 1px solid black;
+  border-radius: 10px;
+}
+
+.submit-button {
+  text-align: center;
 }

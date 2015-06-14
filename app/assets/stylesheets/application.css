@@ -23,9 +23,25 @@ GREY #cdd0d8
 
  @font-face {
         font-family: "Proxima Nova";
-        src: url(assets/fonts/ProximaNovaAlt-Light.otf) format("truetype");
+        src: url(assets/fonts/ProximaNova-Light.ttf) format("truetype");
     }
 
 body {
-  font-family: "Proxima Nova";
+  font-family: 'ProximaNova-Light';
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'ProximaNova-Light';
+}
+
+.btn {
+  background-color: #fef500;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-color: #fef500;
 }

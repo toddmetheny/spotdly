@@ -10,58 +10,63 @@
       </ul>
     </div>
   <% end %>
+<!--   <div class="field">
+    <%# f.text_field :user_position, placeholder: "user position" %>
+  </div> -->
 
-  <div class="field">
-    <%= f.text_field :company_name, placeholder: "company name" %>
+<form>
+  <div class="form-group">
+    <%= f.label "Name of Company" %>
+    <%= f.text_field :company_name, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.text_field :user_position, placeholder: "user position" %>
-  </div>
-
-  <div class="field">
+  <div class="form-group">
     <%= f.label "Brand Concept: Describe your Brand concept in 100 characters" %>
-    <%= f.text_area :description %>
+    <%= f.text_area :description, class: "form-control" %>
   </div>
 
-  <div>
+  <div class="form-group">
   <%= f.label "Background Image: Background images must be in PNG, GIF, or JPG format" %>
-  <%= f.file_field :background_image %>
+  <%= f.file_field :background_image, class: "form-control" %>
   </div>
 
-   <div>
+   <div class="form-group">
     <%= f.label 'Logo' %>
-    <%= f.file_field :logo %>
+    <%= f.file_field :logo, class: "form-control" %>
   </div>
 
-  <div>
-    Brand Idea
+  <div class="form-group">
+    <%= f.label 'Brand Idea' %>
   </div>
 
-  <div>
-    Brand Idea
+  <div class="form-group">
+    <%= f.label 'Brand Slogan' %>
   </div>
 
-  <div class="field">
-    <%= f.label :type_of_business %><br>
-    <%= f.select :type_of_business, options_for_select(Profile::BUSINESS_TYPES) %><br>
+  <div class="form-group">
+    <%= f.label 'Long Description' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label 'Structure: Select the structure that best represents your company or personality' %><br>
+    <%= f.select :type_of_business, options_for_select(Profile::BUSINESS_TYPES), class: "form-control" %><br>
   </div>
 
     <%# f.label :category %>
     <%# f.text_field :category %>
-  <div class="field">
-    <%= f.text_field :city, placeholder: "city" %>
+  <div class="form-group">
+    <%= f.label 'Locations' %>
+    <%= f.text_field :city, placeholder: "City, STATE", class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.select :state, options_for_select(@profile.us_states, "FL") %>
+  <div class="form-group">
+    <%= f.select :state, options_for_select(@profile.us_states, "FL"), class: "form-control" %>
   </div>
 
-
-
-  <div class="actions">
-    <%= f.submit 'Create A Brand Profile' %>
+  <div class="actions submit-button">
+    <%= f.submit 'Create A Brand Profile', class: 'btn btn-default' %>
   </div>
 
 
 <% end %>
+</form>
