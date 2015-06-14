@@ -1,20 +1,16 @@
 <p id="notice"><%= notice %></p>
-<p>
-  <%= image_tag @profile.background_image.to_s %>
-</p>
 
-<p class="text-center">
-  <%= image_tag @profile.logo.to_s %>
-</p>
+<div style="<%= show_brand_background %>">
+  <h2 id="description-show">
+    <%= @profile.description %>
+  </h2>
+
+
 
 <div class="container">
-  <div class="row">
+  <div class="row profile-info">
     <div class="col-md-4">
       <h1><%= @profile.company_name %></h1>
-      <p>
-        <strong>Description:</strong>
-        <%= @profile.description %>
-      </p>
       <p>
         <strong>Type of business:</strong>
         <%= @profile.type_of_business %>
@@ -26,7 +22,10 @@
     </div>
 
     <div class="col-md-4">
-       <p>
+      <p class="text-center">
+        <%= image_tag @profile.logo.to_s, class: "logo-show" %>
+      </p>
+      <p>
         <strong>City:</strong>
         <%= @profile.city %>
       </p>
@@ -38,11 +37,18 @@
     </div>
 
     <div class="col-md-4">
-
-
+      <h2>Online Brand Tree</h2>
+      <ul class="list-unstyled">
+        <li>Hashtag</li>
+        <li>Web Address</li>
+        <li>Social Media Accounts</li>
+        <li>Social Media Accounts</li>
+        <li>Social Media Accounts</li>
+      </ul>
     </div>
 
     <div class="col-md-12">
+    <hr>
       <%= render 'comments/form' %>
 
       <% @comments = Comment.where(:profile_id => @profile.id) %>
@@ -52,8 +58,8 @@
       <% end %>
     </div>
    </div>
+  </div>
 </div>
-
 <%= link_to 'Edit', edit_profile_path(@profile) %> |
 <%= link_to 'Back', profiles_path %>
 

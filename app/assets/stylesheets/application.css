@@ -28,6 +28,7 @@ GREY #cdd0d8
 
 body {
   font-family: 'ProximaNova-Light';
+  padding-bottom: 70px;
 }
 
 h1,
@@ -44,4 +45,8 @@ h5 {
   text-transform: uppercase;
   letter-spacing: 2px;
   border-color: #fef500;
+}
+
+.navbar {
+  margin-bottom: 0;
 }
