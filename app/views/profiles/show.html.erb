@@ -60,6 +60,8 @@
   <%= image_tag @profile.background_image.to_s %>
 </p>
 
+<%= render_shareable :buttons=> ['twitter', 'facebook', 'tumblr'] %>
+
 
 <%= link_to 'Edit', edit_profile_path(@profile) %> |
 <%= link_to 'Back', profiles_path %>
