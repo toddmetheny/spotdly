@@ -5,7 +5,11 @@
     <%= @profile.description %>
   </h2>
 
-
+<div>
+  Matches: <%= @profile.votes_for.size %>
+  <%= link_to "Match", like_profile_path(@profile), method: :put %>
+  <%# link_to "Downvote", dislike_profile_path(@profile), method: :put %>
+</div>
 
 <div class="container">
   <div class="row profile-info">

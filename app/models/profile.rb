@@ -1,6 +1,8 @@
 class Profile < ActiveRecord::Base
-   mount_uploader :logo, LogoUploader
-   mount_uploader :background_image, BackgroundImageUploader
+  mount_uploader :logo, LogoUploader
+  mount_uploader :background_image, BackgroundImageUploader
+
+  acts_as_votable
 
   belongs_to :user
 
