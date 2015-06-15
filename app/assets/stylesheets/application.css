@@ -13,3 +13,40 @@
  *= require_tree .
  *= require_self
  */
+
+ /*
+BLACK #000000
+YELLOW #fef500
+GREY TEXT #7a8285
+GREY #cdd0d8
+*/
+
+ @font-face {
+        font-family: "Proxima Nova";
+        src: url(assets/fonts/ProximaNova-Light.ttf) format("truetype");
+    }
+
+body {
+  font-family: 'ProximaNova-Light';
+  padding-bottom: 70px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'ProximaNova-Light';
+}
+
+.btn {
+  background-color: #fef500;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-color: #fef500;
+}
+
+.navbar {
+  margin-bottom: 0;
+}

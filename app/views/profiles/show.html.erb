@@ -1,65 +1,70 @@
 <p id="notice"><%= notice %></p>
 
+<div style="<%= show_brand_background %>">
+  <h2 id="description-show">
+    <%= @profile.description %>
+  </h2>
+
 <div>
   Matches: <%= @profile.votes_for.size %>
   <%= link_to "Match", like_profile_path(@profile), method: :put %>
   <%# link_to "Downvote", dislike_profile_path(@profile), method: :put %>
 </div>
 
+<div class="container">
+  <div class="row profile-info">
+    <div class="col-md-4">
+      <h1><%= @profile.company_name %></h1>
+      <p>
+        <strong>Type of business:</strong>
+        <%= @profile.type_of_business %>
+      </p>
+      <p>
+        <strong>Category:</strong>
+        <%= @profile.category %>
+      </p>
+    </div>
 
-<p>
-  <strong>Company name:</strong>
-  <%= @profile.company_name %>
-</p>
+    <div class="col-md-4">
+      <p class="text-center">
+        <%= image_tag @profile.logo.to_s, class: "logo-show" %>
+      </p>
+      <p>
+        <strong>City:</strong>
+        <%= @profile.city %>
+      </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @profile.description %>
-</p>
+      <p>
+        <strong>State:</strong>
+        <%= @profile.state %>
+      </p>
+    </div>
 
-<p>
-  <strong>User position:</strong>
-  <%= @profile.user_position %>
-</p>
+    <div class="col-md-4">
+      <h2>Online Brand Tree</h2>
+      <ul class="list-unstyled">
+        <li>Hashtag</li>
+        <li>Web Address</li>
+        <li>Social Media Accounts</li>
+        <li>Social Media Accounts</li>
+        <li>Social Media Accounts</li>
+      </ul>
+    </div>
 
-<p>
-  <strong>Type of business:</strong>
-  <%= @profile.type_of_business %>
-</p>
+    <div class="col-md-12">
+    <hr>
+      <%= render 'comments/form' %>
 
-<p>
-  <strong>Category:</strong>
-  <%= @profile.category %>
-</p>
-
-<p>
-  <strong>City:</strong>
-  <%= @profile.city %>
-</p>
-
-<p>
-  <strong>State:</strong>
-  <%= @profile.state %>
-</p>
-
-<%= render 'comments/form' %>
-
-<% @comments = Comment.where(:profile_id => @profile.id) %>
-<% @comments.each do |c| %>
-  <%= c.description %>
-  <%= User.find(c.user_id).name %><br>
-<% end %>
-
-<p>
-  <strong>Logo:</strong>
-  <%= image_tag @profile.logo.to_s %>
-</p>
-
-<p>
-  <strong>Background Image:</strong>
-  <%= image_tag @profile.background_image.to_s %>
-</p>
-
-
+      <% @comments = Comment.where(:profile_id => @profile.id) %>
+      <% @comments.each do |c| %>
+        <%= c.description %>
+        <%= User.find(c.user_id).name %><br>
+      <% end %>
+    </div>
+   </div>
+  </div>
+</div>
 <%= link_to 'Edit', edit_profile_path(@profile) %> |
 <%= link_to 'Back', profiles_path %>
+
+
