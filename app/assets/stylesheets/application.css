@@ -21,10 +21,10 @@ GREY TEXT #7a8285
 GREY #cdd0d8
 */
 
- @font-face {
+@font-face {
         font-family: "Proxima Nova";
         src: url(assets/fonts/ProximaNova-Light.ttf) format("truetype");
-    }
+}
 
 body {
   font-family: 'ProximaNova-Light';
@@ -39,6 +39,10 @@ h5 {
   font-family: 'ProximaNova-Light';
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 .btn {
   background-color: #fef500;
   color: #000;
@@ -49,4 +53,11 @@ h5 {
 
 .navbar {
   margin-bottom: 0;
+}
+
+img#logo{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 50px;
 }

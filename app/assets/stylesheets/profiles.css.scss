@@ -13,11 +13,13 @@ h1 {
 .logo-thumbnail {
   width: 50px;
   border-radius: 50%;
+  border: 3px solid #fff;
 }
 
 img.logo-show {
-  height: 100px;
+  height: 150px;
   border-radius: 50%;
+  border: 5px solid #cdd0d8;
 }
 
 .brand-thumbnail {
@@ -30,7 +32,7 @@ img.logo-show {
 }
 
 .profile-info {
-  margin-top: 350px;
+  margin-top: 50px;
 }
 
 #description-show {
@@ -38,4 +40,22 @@ img.logo-show {
   letter-spacing: 3px;
   width: 50%;
   margin: 0 auto;
+  padding-top: 50px;
+  color: #fff;
+}
+
+.match-stuff {
+  padding-top: 150px;
+}
+.match-button {
+  background: #fef500;
+  padding: 10px 40px;
+  border-radius: 50px 50px 50px 50px;
+  text-transform: uppercase;
+}
+
+#hashtag {
+  background: #000;
+  color: #fff;
+  padding: 10px 20px;
 }
