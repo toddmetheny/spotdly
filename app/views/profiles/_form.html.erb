@@ -26,25 +26,28 @@
   </div>
 
   <div class="form-group">
-  <%= f.label "Background Image: Background images must be in PNG, GIF, or JPG format" %>
-  <%= f.file_field :background_image, class: "form-control" %>
+    <%= f.label "Background Image: Background images must be in PNG, GIF, or JPG format" %>
+    <%= f.file_field :background_image, class: "form-control" %>
   </div>
 
-   <div class="form-group">
+  <div class="form-group">
     <%= f.label 'Logo' %>
     <%= f.file_field :logo, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <%= f.label 'Brand Idea' %>
+    <%= f.label "Differentiator: What makes your company different?" %>
+    <%= f.text_field :brand_idea, class: "form-control" %>
   </div>
 
   <div class="form-group">
     <%= f.label 'Brand Slogan' %>
+    <%= f.text_field :slogan, class: "form-control" %>
   </div>
 
   <div class="form-group">
     <%= f.label 'Long Description' %>
+    <%= f.text_field :long_description, class: "form-control" %>
   </div>
 
   <div class="form-group">
@@ -52,15 +55,38 @@
     <%= f.select :type_of_business, options_for_select(Profile::BUSINESS_TYPES), class: "form-control" %><br>
   </div>
 
-    <%# f.label :category %>
-    <%# f.text_field :category %>
   <div class="form-group">
     <%= f.label 'Locations' %>
-    <%= f.text_field :city, placeholder: "City, STATE", class: "form-control" %>
+    <%= f.text_field :city, placeholder: "City", class: "form-control" %>
   </div>
 
   <div class="form-group">
     <%= f.select :state, options_for_select(@profile.us_states, "FL"), class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label 'Web Address' %>
+    <%= f.text_field :url, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label 'Facebook' %>
+    <%= f.text_field :facebook, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label 'Twitter' %>
+    <%= f.text_field :twitter, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label 'Instagram' %>
+    <%= f.text_field :instagram, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label 'Hashtag' %>
+    <%= f.text_field :hashtag, class: "form-control" %>
   </div>
 
   <div class="actions submit-button">

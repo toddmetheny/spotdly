@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150614021918) do
+ActiveRecord::Schema.define(version: 20150621231400) do
 
   create_table "comments", force: true do |t|
     t.text     "description"
@@ -44,6 +44,14 @@ ActiveRecord::Schema.define(version: 20150614021918) do
     t.integer  "cached_weighted_score",   default: 0
     t.integer  "cached_weighted_total",   default: 0
     t.float    "cached_weighted_average", default: 0.0
+    t.string   "facebook"
+    t.string   "twitter"
+    t.string   "instagram"
+    t.string   "hashtag"
+    t.string   "url"
+    t.string   "slogan"
+    t.text     "long_description"
+    t.string   "brand_idea"
   end
 
   add_index "profiles", ["cached_votes_down"], name: "index_profiles_on_cached_votes_down"
