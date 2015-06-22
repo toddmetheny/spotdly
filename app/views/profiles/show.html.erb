@@ -60,6 +60,13 @@
         <%= User.find(c.user_id).name %><br>
       <% end %>
     </div>
+    
+    <div class="col-md-12">
+      <p>
+        Share this:<%= social_share_button_tag(@profile.company_name) %>
+      </p>
+    </div>
+
    </div>
   </div>
 </div>
