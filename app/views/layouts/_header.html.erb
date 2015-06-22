@@ -1,22 +1,30 @@
 <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <h2><%= link_to 'Create a Brand', new_profile_path %></h2>
-
+  <div class="container">
+    <div class="row">
       <ul class="list-unstyled list-inline">
-        <li>Rocket Ship</li>
-        <li>Share</li>
-        <li>
+        <li class="navbar-left"><%= link_to 'Create a Brand +', new_profile_path %></li>
+      </ul>
+        <%= image_tag "logo.png", id: 'logo' %>
+      <ul class="list-unstyled list-inline navbar-right">
+        <li class="navbar-right"><i class="fa fa-share-alt fa-2x"></i></li>
+        <li class="dropdown navbar-right">
           <% if user_signed_in? %>
-            <%= current_user.name %> dropdown
-            <%= link_to 'Edit profile', edit_user_registration_path %> |
-            <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-          <% else %>
-            <%= link_to "Sign up", new_user_registration_path %> |
-            <%= link_to "Login", new_user_session_path %>
-          <% end %>
+
+            <a id="dLabel" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <%= current_user.name %> <i class="fa fa-angle-down"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dLabel">
+                <li><%= link_to 'Edit profile', edit_user_registration_path %>
+                </li>
+                <li><%= link_to "Logout", destroy_user_session_path, method: :delete %>
+                </li>
+              <% else %>
+                <li><%= link_to "Sign up", new_user_registration_path %></li>
+                <li><%= link_to "Login", new_user_session_path %></li>
+              <% end %>
+            </ul>
         </li>
       </ul>
+      </div>
     </div>
-  </div>
 </nav>

@@ -2,13 +2,12 @@
 
 <div style="<%= show_brand_background %>">
   <h2 id="description-show">
-    <%= @profile.description %>
+    <i class="fa fa-quote-left"></i><%= @profile.description %><i class="fa fa-quote-right"></i>
   </h2>
 
-<div>
-  Matches: <%= @profile.votes_for.size %>
-  <%= link_to "Match", like_profile_path(@profile), method: :put %>
-  <%# link_to "Downvote", dislike_profile_path(@profile), method: :put %>
+<div class="text-center match-stuff">
+  <p><%= @profile.votes_for.size %> Matches</p>
+  <%= link_to "Match", like_profile_path(@profile), method: :put, class: 'match-button' %>
 </div>
 
 <div class="container">
@@ -25,7 +24,7 @@
       </p>
     </div>
 
-    <div class="col-md-4">
+    <div class="col-md-4 text-center">
       <p class="text-center">
         <%= image_tag @profile.logo.to_s, class: "logo-show" %>
       </p>
@@ -41,9 +40,9 @@
     </div>
 
     <div class="col-md-4">
-      <h2>Online Brand Tree</h2>
+      <h2 id="brand-tree">Online Brand Tree</h2>
       <ul class="list-unstyled">
-        <li>Hashtag</li>
+        <li id="hashtag">Hashtag</li>
         <li>Web Address</li>
         <li>Social Media Accounts</li>
         <li>Social Media Accounts</li>
@@ -64,7 +63,7 @@
    </div>
   </div>
 </div>
-<%= link_to 'Edit', edit_profile_path(@profile) %> |
-<%= link_to 'Back', profiles_path %>
+<%# link_to 'Edit', edit_profile_path(@profile) %> |
+<%# link_to 'Back', profiles_path %>
 
 
