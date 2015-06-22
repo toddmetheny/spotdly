@@ -5,6 +5,11 @@
 h1 {
   text-align: center;
 }
+
+h3 {
+  text-transform: uppercase;
+}
+
 .background-image-thumbnail {
   position: static;
   width: 200px;
@@ -44,12 +49,12 @@ img.logo-show {
   color: #fff;
 }
 
-.match-stuff {
-  padding-top: 150px;
-}
-
 #brand-tree {
   text-transform: uppercase;
+}
+
+.match-stuff {
+  padding-top: 115px;
 }
 
 .match-button {
