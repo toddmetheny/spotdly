@@ -62,3 +62,9 @@ img#logo{
   margin-right: auto;
   height: 50px;
 }
+
+.edit-user{
+  border-style: solid;
+  border-color: #fafafa;
+  width: 50%;
+}
