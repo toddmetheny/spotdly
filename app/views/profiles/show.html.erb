@@ -22,6 +22,9 @@
         <strong>Category:</strong>
         <%= @profile.category %>
       </p>
+      <p>
+        <%= @profile.city %>, <%= @profile.state %>
+      </p>
     </div>
 
     <div class="col-md-4 text-center">
@@ -29,24 +32,29 @@
         <%= image_tag @profile.logo.to_s, class: "logo-show" %>
       </p>
       <p>
-        <strong>City:</strong>
-        <%= @profile.city %>
+        <h3>Brand Idea</h3>
+         <%= @profile.brand_idea %>
+      </p>
+      <p>
+        <h3>Slogan</h3>
+        <%= @profile.slogan %>
+      </p>
+      <p>
+        <h3>Description</h3>
+        <%= @profile.long_description %>
       </p>
 
-      <p>
-        <strong>State:</strong>
-        <%= @profile.state %>
-      </p>
+
     </div>
 
-    <div class="col-md-4">
+    <div class="col-md-4 text-center">
       <h2 id="brand-tree">Online Brand Tree</h2>
       <ul class="list-unstyled">
-        <li id="hashtag">Hashtag</li>
-        <li>Web Address</li>
-        <li>Social Media Accounts</li>
-        <li>Social Media Accounts</li>
-        <li>Social Media Accounts</li>
+        <li id="hashtag"><%= @profile.hashtag %></li>
+        <li><%= @profile.url %></li>
+        <li><%= @profile.facebook %></li>
+        <li><%= @profile.twitter %></li>
+        <li><%= @profile.instagram %></li>
       </ul>
     </div>
 
@@ -70,7 +78,7 @@
    </div>
   </div>
 </div>
-<%# link_to 'Edit', edit_profile_path(@profile) %> |
+<%= link_to 'Edit', edit_profile_path(@profile) %> |
 <%# link_to 'Back', profiles_path %>
 
 
