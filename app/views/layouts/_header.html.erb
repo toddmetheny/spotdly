@@ -4,7 +4,7 @@
       <ul class="list-unstyled list-inline">
         <li class="navbar-left"><%= link_to 'Create a Brand +', new_profile_path %></li>
       </ul>
-        <%= image_tag "logo.png", id: 'logo' %>
+        <%= link_to(image_tag("logo.png"), profiles_path) %>
       <ul class="list-unstyled list-inline navbar-right">
         <li class="navbar-right"><i class="fa fa-share-alt fa-2x"></i></li>
         <li class="dropdown navbar-right">
