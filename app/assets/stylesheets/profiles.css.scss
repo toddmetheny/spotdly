@@ -21,15 +21,30 @@ h3 {
   border: 3px solid #fff;
 }
 
+img {
+  height: 50px;
+}
+
 img.logo-show {
   height: 150px;
   border-radius: 50%;
   border: 5px solid #cdd0d8;
 }
 
+img.logo-thumbnail {
+  border: 2px solid #fff;
+}
+
+.logo-index {
+  text-align: center;
+}
+
 .brand-thumbnail {
-  border: 1px solid black;
+ /* border: 1px solid black;*/
   border-radius: 10px;
+  min-height: 200px;
+  margin: 1%;
+  box-shadow: 2px 2px 2px #888888;
 }
 
 .submit-button {
@@ -38,6 +53,12 @@ img.logo-show {
 
 .profile-info {
   margin-top: 50px;
+}
+
+#description-thumbnail {
+  text-transform: uppercase;
+  padding-top: 5px;
+  min-height: 100px;
 }
 
 #description-show {
@@ -62,6 +83,11 @@ img.logo-show {
   padding: 10px 40px;
   border-radius: 50px 50px 50px 50px;
   text-transform: uppercase;
+}
+
+.match-button:hover {
+  background-color: #fef500;
+  color: #cdd0d8;
 }
 
 #hashtag {

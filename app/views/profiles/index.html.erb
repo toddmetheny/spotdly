@@ -1,11 +1,12 @@
 <h1 class="text-center">Discover Brands</h1>
-  <% @profiles.each do |profile| %>
-    <%= link_to profile do %>
-      <div class="col-md-2 brand-thumbnail">
-        <%= image_tag profile.background_image, class: 'background-image-thumbnail' %>
-        <%= profile.description %>
-        <%= image_tag profile.logo, class: 'logo-thumbnail' %>
-        <%= profile.company_name %>
-      </div>
+  <div class="index-page">
+    <% @profiles.each do |profile| %>
+      <%= link_to profile do %>
+        <div class="col-md-2 brand-thumbnail">
+          <p id="description-thumbnail" class="text-center"><i class="fa fa-quote-left"></i><%= profile.description %><i class="fa fa-quote-right"></i></p>
+          <div class="logo-index"><%= image_tag profile.logo, class: 'logo-thumbnail' %></div>
+          <h4 class="text-center"><%= profile.company_name %></h4>
+        </div>
+      <% end %>
     <% end %>
-  <% end %>
+  </div>
