@@ -1,30 +1,30 @@
 <nav class="navbar navbar-default">
   <div class="container">
-    <div class="row">
-      <ul class="list-unstyled list-inline">
-        <li class="navbar-left"><%= link_to 'Create a Brand +', new_profile_path %></li>
-      </ul>
-        <%= link_to(image_tag("logo.png"), profiles_path) %>
-      <ul class="list-unstyled list-inline navbar-right">
-        <li class="navbar-right"><i class="fa fa-share-alt fa-2x"></i></li>
-        <li class="dropdown navbar-right">
-          <% if user_signed_in? %>
+    <ul class="list-unstyled list-inline">
+      <li class="col-md-3"><h2><%= link_to new_profile_path do %>
+      Create a Brand <i class="fa fa-plus-circle"></i>
+      <% end %>
+      </h2></li>
+    </ul>
+      <div class="col-md-6" id="logo"><%= link_to(image_tag("logo.png"), profiles_path) %></div>
+    <ul class="list-unstyled list-inline col-md-2 col-md-offset-1">
+      <li class="dropdown navbar-right">
+        <% if user_signed_in? %>
 
-            <a id="dLabel" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <%= current_user.name %> <i class="fa fa-angle-down"></i>
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="dLabel">
-                <li><%= link_to 'Edit profile', edit_user_registration_path %>
-                </li>
-                <li><%= link_to "Logout", destroy_user_session_path, method: :delete %>
-                </li>
-              <% else %>
-                <li><%= link_to "Sign up", new_user_registration_path %></li>
-                <li><%= link_to "Login", new_user_session_path %></li>
-              <% end %>
-            </ul>
-        </li>
-      </ul>
-      </div>
-    </div>
+          <a id="dLabel" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <%= current_user.name %> <i class="fa fa-angle-down"></i>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="dLabel">
+              <li><%= link_to 'Edit profile', edit_user_registration_path %>
+              </li>
+              <li><%= link_to "Logout", destroy_user_session_path, method: :delete %>
+              </li>
+            <% else %>
+              <li><%= link_to "Sign up", new_user_registration_path %></li>
+              <li><%= link_to "Login", new_user_session_path %></li>
+            <% end %>
+          </ul>
+      </li>
+    </ul>
+  </div>
 </nav>
