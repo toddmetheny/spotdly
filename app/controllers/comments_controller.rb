@@ -23,7 +23,11 @@ class CommentsController < ApplicationController
   def create
     @comment = Comment.new(comment_params)
     @comment.save
-    respond_with(@comment)
+    if @comment.save
+      redirect_to profile_path(Profile.find(@comment.profile_id))
+    end
+
+    # respond_with(@comment)
   end
 
   def update
