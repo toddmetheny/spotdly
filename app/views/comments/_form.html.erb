@@ -15,10 +15,12 @@
     <%= f.label "Leave a Comment..." %>
     <%= f.text_area :description, class: "form-control" %>
   </div>
+
   <div class="field">
     <%# f.label :user_id %>
     <%= f.hidden_field :user_id, value: current_user.id %>
   </div>
+  
   <div class="field">
     <%# f.label :profile_id %>
     <%= f.hidden_field :profile_id, value: @profile.id %>

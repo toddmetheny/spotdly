@@ -63,7 +63,11 @@
 
     <div class="col-md-12">
     <hr>
-      <%= render 'comments/form' %>
+      <% if current_user %>
+        <%= render 'comments/form' %>
+      <% else %>
+        <%= link_to "Log in to leave a comment", new_user_session_path %>
+      <% end %>
 
       <% @comments = Comment.where(:profile_id => @profile.id) %>
       <% @comments.each do |c| %>
