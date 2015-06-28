@@ -91,3 +91,9 @@ li.dropdown {
 .fa-plus-circle {
   color: #fef500;
 }
+
+.edit-user{
+  border-style: solid;
+  border-color: #fafafa;
+  width: 50%;
+}
