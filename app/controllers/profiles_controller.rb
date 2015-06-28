@@ -29,11 +29,11 @@ class ProfilesController < ApplicationController
   # POST /profiles
   # POST /profiles.json
   def create
-    unless current_user
-      redirect_to new_user_session
-    end
+
     @profile = Profile.new(profile_params)
-    @profile.user_id = current_user.id
+    if current_user
+      @profile.user_id = current_user.id
+    end
 
     respond_to do |format|
       if @profile.save
