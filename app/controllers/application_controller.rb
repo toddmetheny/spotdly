@@ -7,6 +7,8 @@ class ApplicationController < ActionController::Base
 
   protected
 
+  # @profile = Profile.where(:user_id => current_user).last
+
   def configure_permitted_parameters
     devise_parameter_sanitizer.for(:sign_up) << :name
   end

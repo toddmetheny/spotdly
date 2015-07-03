@@ -15,8 +15,12 @@
             <%= current_user.name %> <i class="fa fa-angle-down"></i>
           </a>
           <ul class="dropdown-menu" aria-labelledby="dLabel">
-              <li>Fix This Route<%# link_to 'Edit Brand Page', edit_profile_path(@profile) %>
-              </li>
+            <% unless @profile.nil? %>
+              <% if @profile.user_id == current_user.id %>
+                <li><%= link_to 'Edit Brand Page', edit_profile_path(@profile) %>
+                </li>
+              <% end %>
+            <% end %>
               <li><%= link_to 'Edit Account', edit_user_registration_path %>
               </li>
               <li><%= link_to "Logout", destroy_user_session_path, method: :delete %>
