@@ -63,6 +63,13 @@
 
     <div class="col-md-12">
     <hr>
+      <p>
+        Share this:<%= social_share_button_tag(@profile.company_name) %>
+      </p>
+    </div>
+
+    <div class="col-md-12">
+    <hr>
       <% if current_user %>
         <%= render 'comments/form' %>
       <% else %>
@@ -74,12 +81,6 @@
         <%= c.description %>
         <%= User.find(c.user_id).name %><br>
       <% end %>
-    </div>
-
-    <div class="col-md-12">
-      <p>
-        Share this:<%= social_share_button_tag(@profile.company_name) %>
-      </p>
     </div>
 
    </div>
