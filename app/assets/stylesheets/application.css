@@ -23,12 +23,17 @@ GREY #cdd0d8
 */
 
 @font-face {
-  font-family: "Proxima Nova";
-  src: url(assets/fonts/ProximaNova-Light.ttf) format("truetype");
+  font-family: "Proxima Nova-Light";
+  src: url(ProximaNova-Light.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Proxima Nova-Thin";
+  src: url(ProximaNova-Thin.ttf) format("truetype");
 }
 
 body {
-  font-family: 'ProximaNova-Light';
+  font-family: 'ProximaNova-Thin';
   padding-bottom: 70px;
 }
 
@@ -37,7 +42,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: 'ProximaNova-Light';
+  font-family: 'ProximaNova-Thin';
 }
 
 h4 {
