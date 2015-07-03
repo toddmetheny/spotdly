@@ -6,6 +6,9 @@ class Profile < ActiveRecord::Base
 
   belongs_to :user
 
+  validates :company_name, presence: true
+  validates :description, length: { maximum: 100 }
+
   BUSINESS_TYPES=[['technology'], ['retail'], ['services'], ['restaurant']]
 
   def us_states
