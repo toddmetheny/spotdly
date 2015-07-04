@@ -77,8 +77,10 @@
 
       <% @comments = Comment.where(:profile_id => @profile.id) %>
       <% @comments.each do |c| %>
-        <%= c.description %>
-        <%= User.find(c.user_id).name %><br>
+        <hr>
+        <h4> <%= User.find(c.user_id).name %> says...</h4>
+        <p><%= c.description %></p>
+        <hr>
       <% end %>
     </div>
 
