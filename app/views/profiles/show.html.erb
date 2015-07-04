@@ -53,10 +53,10 @@
       <h2 id="brand-tree">Online Brand Tree</h2>
       <ul class="list-unstyled">
         <li id="hashtag"><%= @profile.hashtag %></li>
-        <li><%= @profile.url %></li>
-        <li><%= @profile.facebook %></li>
-        <li><%= @profile.twitter %></li>
-        <li><%= @profile.instagram %></li>
+        <li><a href="<%= @profile.url %>"><%= @profile.url %></a></li>
+        <li><a href="<%= @profile.facebook %>"><%= @profile.facebook %></a></li>
+        <li><a href="<%= @profile.twitter %>"><%= @profile.twitter %></a></li>
+        <li><a href="<%= @profile.instagram %>"><%= @profile.instagram %></a></li>
       </ul>
     </div>
 
@@ -85,7 +85,6 @@
    </div>
   </div>
 </div>
-<%# link_to 'Edit', edit_profile_path(@profile) %> 
-<%# link_to 'Back', profiles_path %>
+
 
 
