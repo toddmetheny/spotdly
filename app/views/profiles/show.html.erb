@@ -18,15 +18,12 @@
     <div class="col-md-4">
       <h1><%= @profile.company_name %></h1>
       <p>
-        <strong>Type of business:</strong>
-        <%= @profile.type_of_business %>
+        <h3>Type of business</h3>
+         <p><%= @profile.type_of_business %></p>
       </p>
       <p>
-        <strong>Category:</strong>
-        <%= @profile.category %>
-      </p>
-      <p>
-        <%= @profile.city %>, <%= @profile.state %>
+        <h3>Location</h3>
+        <p><%= @profile.city %>, <%= @profile.state %></p>
       </p>
     </div>
 
@@ -36,15 +33,15 @@
       </p>
       <p>
         <h3>Brand Idea</h3>
-         <%= @profile.brand_idea %>
+         <p><%= @profile.brand_idea %></p>
       </p>
       <p>
         <h3>Slogan</h3>
-        <%= @profile.slogan %>
+        <p><%= @profile.slogan %></p>
       </p>
       <p>
         <h3>Description</h3>
-        <%= @profile.long_description %>
+        <p><%= @profile.long_description %></p>
       </p>
 
     </div>
