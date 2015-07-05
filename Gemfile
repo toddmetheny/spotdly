@@ -24,8 +24,10 @@ end
 
 gem 'devise'
 gem 'rmagick'
-gem 'carrierwave'
+# gem 'carrierwave'
+gem 'carrierwave-aws'
+# gem 'fog-aws'
+# gem 'fog', "~> 1.3.1"
 gem 'acts_as_votable'
 gem 'social-share-button'
 gem 'aws-sdk'
-gem 'fog'
