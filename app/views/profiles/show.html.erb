@@ -50,11 +50,21 @@
     <div class="col-md-4">
       <h2 class="text-center" id="brand-tree">Online Brand Tree</h2>
       <ul class="list-unstyled social-media">
-        <li id="hashtag"><%= @profile.hashtag %></li>
-        <li><i class="fa fa-globe fa-2x"></i><a href="<%= @profile.url %>"><%= @profile.url %></a></li>
-        <li><i class="fa fa-facebook fa-2x"></i><a href="<%= @profile.facebook %>"><%= @profile.facebook %></a></li>
-        <li><i class="fa fa-twitter fa-2x"></i><a href="<%= @profile.twitter %>"><%= @profile.twitter %></a></li>
-        <li><i class="fa fa-instagram fa-2x"></i><a href="<%= @profile.instagram %>"><%= @profile.instagram %></a></li>
+        <% unless @profile.hashtag.blank? %>
+          <li id="hashtag"><%= @profile.hashtag %></li>
+        <% end %>
+        <% unless @profile.url.blank? %>
+          <li><i class="fa fa-globe fa-2x"></i><a href="<%= @profile.url %>"><%= @profile.url %></a></li>
+        <% end %>
+        <% unless @profile.facebook.blank? %>
+          <li><i class="fa fa-facebook fa-2x"></i><a href="<%= @profile.facebook %>"><%= @profile.facebook %></a></li>
+        <% end %>
+        <% unless @profile.twitter.blank? %>
+          <li><i class="fa fa-twitter fa-2x"></i><a href="<%= @profile.twitter %>"><%= @profile.twitter %></a></li>
+        <% end %>
+        <% unless @profile.instagram.blank? %>
+          <li><i class="fa fa-instagram fa-2x"></i><a href="<%= @profile.instagram %>"><%= @profile.instagram %></a></li>
+        <% end %>
       </ul>
     </div>
 
