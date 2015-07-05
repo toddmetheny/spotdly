@@ -26,9 +26,11 @@
               <li><%= link_to "Logout", destroy_user_session_path, method: :delete %>
               </li>
             <% else %>
-              <li><%= link_to "Sign up", new_user_registration_path %></li>
-              <li><%= link_to "Login", new_user_session_path %></li>
+              <ul class="list-unstyled list-inline">
+                <li><%= link_to "Sign up", new_user_registration_path %></li>
+                <li><%= link_to "Login", new_user_session_path %></li>
             <% end %>
+              </ul>
           </ul>
       </li>
     </ul>

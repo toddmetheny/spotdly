@@ -23,12 +23,7 @@ GREY #cdd0d8
 */
 
 @font-face {
-  font-family: "Proxima Nova-Light";
-  src: url(ProximaNova-Light.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: "Proxima Nova-Thin";
+  font-family: "ProximaNova-Thin";
   src: url(ProximaNova-Thin.ttf) format("truetype");
 }
 
@@ -102,4 +97,9 @@ li.dropdown {
   border-color: #fafafa;
   width: 50%;
   margin-top: 30px;
+}
+
+label {
+  text-transform: uppercase;
+  font-weight: bold;
 }
