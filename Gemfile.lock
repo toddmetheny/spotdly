@@ -149,7 +149,6 @@ PLATFORMS
 DEPENDENCIES
   acts_as_votable
   aws-sdk
-  carrierwave
   carrierwave-aws
   coffee-rails (~> 4.0.0)
   devise
