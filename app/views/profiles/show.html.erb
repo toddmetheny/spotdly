@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<div style="<%= show_brand_background %>">
+<div class="background" style="<%= show_brand_background %>">
   <h2 id="description-show">
     <i class="fa fa-quote-left"></i><%= @profile.description %><i class="fa fa-quote-right"></i>
   </h2>
@@ -11,6 +11,7 @@
     <i class="fa fa-exchange">Match</i>
   <% end %>
   </div>
+</div>
 </div>
 
 <div class="container">
@@ -46,14 +47,14 @@
 
     </div>
 
-    <div class="col-md-4 text-center">
-      <h2 id="brand-tree">Online Brand Tree</h2>
+    <div class="col-md-4">
+      <h2 class="text-center" id="brand-tree">Online Brand Tree</h2>
       <ul class="list-unstyled social-media">
         <li id="hashtag"><%= @profile.hashtag %></li>
-        <li><a href="<%= @profile.url %>"><%= @profile.url %></a></li>
-        <li><a href="<%= @profile.facebook %>"><%= @profile.facebook %></a></li>
-        <li><a href="<%= @profile.twitter %>"><%= @profile.twitter %></a></li>
-        <li><a href="<%= @profile.instagram %>"><%= @profile.instagram %></a></li>
+        <li><i class="fa fa-globe fa-2x"></i><a href="<%= @profile.url %>"><%= @profile.url %></a></li>
+        <li><i class="fa fa-facebook fa-2x"></i><a href="<%= @profile.facebook %>"><%= @profile.facebook %></a></li>
+        <li><i class="fa fa-twitter fa-2x"></i><a href="<%= @profile.twitter %>"><%= @profile.twitter %></a></li>
+        <li><i class="fa fa-instagram fa-2x"></i><a href="<%= @profile.instagram %>"><%= @profile.instagram %></a></li>
       </ul>
     </div>
 
