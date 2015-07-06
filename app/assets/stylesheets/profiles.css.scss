@@ -10,10 +10,6 @@ h3 {
   text-transform: uppercase;
 }
 
-.background {
-  opacity: 0.5;
-}
-
 .background-image-thumbnail {
   position: static;
   width: 200px;
@@ -102,4 +98,9 @@ img.logo-thumbnail {
 
 .social-media li{
   padding: 10px;
+}
+
+.num-matches{
+  color: #fff;
+  font-weight: bold;
 }
