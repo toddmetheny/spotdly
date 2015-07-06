@@ -7,32 +7,34 @@
       </h2></li>
     </ul>
       <div class="col-md-6" id="logo"><%= link_to(image_tag("logo.png"), profiles_path) %></div>
-    <ul class="list-unstyled list-inline col-md-2 col-md-offset-1">
-      <li class="dropdown navbar-right">
-        <% if user_signed_in? %>
 
-          <a id="dLabel" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <%= current_user.name %> <i class="fa fa-angle-down"></i>
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="dLabel">
-            <% unless @profile.nil? %>
-              <% if current_user && @profile.user_id == current_user.id %>
-                <li><%= link_to 'Edit Brand Page', edit_profile_path(@profile) %>
-                </li>
+    <div class="dropdown">
+      <ul class="list-unstyled list-inline col-md-2 col-md-offset-1">
+        <li class="dropdown navbar-right">
+          <% if user_signed_in? %>
+            <a id="dLabel" data-target="#" href="http://example.com" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              <%= current_user.name %> <i class="fa fa-angle-down"></i>
+            </a>
+            <ul class="dropdown-menu nav navbar-nav navbar-right">
+              <% unless @profile.nil? %>
+                <% if current_user && @profile.user_id == current_user.id %>
+                  <li><%= link_to 'Edit Brand Page', edit_profile_path(@profile) %>
+                  </li>
+                <% end %>
               <% end %>
-            <% end %>
-              <li><%= link_to 'Edit Account', edit_user_registration_path %>
-              </li>
-              <li><%= link_to "Logout", destroy_user_session_path, method: :delete %>
-              </li>
-            <% else %>
-              <ul class="list-unstyled list-inline">
-                <li><%= link_to "Sign up", new_user_registration_path %></li>
-                <li><%= link_to "Login", new_user_session_path %></li>
-            <% end %>
-              </ul>
-          </ul>
-      </li>
-    </ul>
+                <li><%= link_to 'Edit Account', edit_user_registration_path %>
+                </li>
+                <li><%= link_to "Logout", destroy_user_session_path, method: :delete %>
+                </li>
+              <% else %>
+                <ul class="list-unstyled list-inline">
+                  <li><%= link_to "Sign up", new_user_registration_path %></li>
+                  <li><%= link_to "Login", new_user_session_path %></li>
+              <% end %>
+                </ul>
+            </ul>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>
