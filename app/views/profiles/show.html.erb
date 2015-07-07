@@ -2,13 +2,13 @@
 
 <div class="background" style="<%= show_brand_background %>">
   <h2 id="description-show">
-    <i class="fa fa-quote-left"></i><%= @profile.description %><i class="fa fa-quote-right"></i>
+    <i class="fa-big fa fa-quote-left"></i><%= @profile.description %><i class=" fa-big fa fa-quote-right"></i>
   </h2>
 
 <div class="text-center match-stuff">
     <p class="num-matches text-center"><%= @profile.votes_for.size %> Matches</p>
   <div><%= link_to like_profile_path(@profile), method: :put, class: 'match-button' do %>
-    <i class="fa fa-exchange">Match</i>
+    <i class="fa fa-exchange"> Match</i>
   <% end %>
   </div>
 </div>
@@ -54,16 +54,16 @@
           <li id="hashtag"><%= @profile.hashtag %></li>
         <% end %>
         <% unless @profile.url.blank? %>
-          <li><i class="fa fa-globe fa-2x"></i><a href="<%= @profile.url %>"><%= @profile.url %></a></li>
+          <li><i class="fa-big fa fa-globe fa-2x"></i><a href="<%= @profile.url %>"><%= @profile.url %></a></li>
         <% end %>
         <% unless @profile.facebook.blank? %>
-          <li><i class="fa fa-facebook fa-2x"></i><a href="<%= @profile.facebook %>"><%= @profile.facebook %></a></li>
+          <li><i class="fa-big fa fa-facebook fa-2x"></i><a href="<%= @profile.facebook %>"><%= @profile.facebook %></a></li>
         <% end %>
         <% unless @profile.twitter.blank? %>
-          <li><i class="fa fa-twitter fa-2x"></i><a href="<%= @profile.twitter %>"><%= @profile.twitter %></a></li>
+          <li><i class="fa-big fa fa-twitter fa-2x"></i><a href="<%= @profile.twitter %>"><%= @profile.twitter %></a></li>
         <% end %>
         <% unless @profile.instagram.blank? %>
-          <li><i class="fa fa-instagram fa-2x"></i><a href="<%= @profile.instagram %>"><%= @profile.instagram %></a></li>
+          <li><i class="fa-big fa fa-instagram fa-2x"></i><a href="<%= @profile.instagram %>"><%= @profile.instagram %></a></li>
         <% end %>
       </ul>
     </div>
