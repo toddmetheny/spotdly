@@ -31,4 +31,3 @@ gem 'carrierwave-aws'
 gem 'acts_as_votable'
 gem 'social-share-button'
 gem 'aws-sdk'
-
