@@ -1,17 +1,18 @@
 <p id="notice"><%= notice %></p>
 
 <div class="background" style="<%= show_brand_background %>">
-  <h2 id="description-show">
+  <h2 id="description-show" class="text-center">
     <i class="fa-big fa fa-quote-left"></i><%= @profile.description %><i class=" fa-big fa fa-quote-right"></i>
   </h2>
 
-<div class="text-center match-stuff">
-    <p class="num-matches text-center"><%= @profile.votes_for.size %> Matches</p>
-  <div><%= link_to like_profile_path(@profile), method: :put, class: 'match-button' do %>
-    <i class="fa fa-exchange"> Match</i>
-  <% end %>
+  <div class="text-center match-stuff">
+      <p class="num-matches text-center"><%= @profile.votes_for.size %> Matches</p>
+    <div class="text-center">
+      <%= link_to like_profile_path(@profile), method: :put, class: 'match-button' do %>
+        <i class="fa fa-exchange"> Match</i>
+      <% end %>
+    </div>
   </div>
-</div>
 </div>
 
 <div class="container">
