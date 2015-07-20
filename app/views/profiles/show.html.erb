@@ -55,13 +55,13 @@
           <li id="hashtag"><%= @profile.hashtag %></li>
         <% end %>
         <% unless @profile.url.blank? %>
-          <li><i class="fa-big fa fa-globe fa-2x"></i><a href="<%= @profile.url %>"><%= @profile.url %></a></li>
+          <li><i class="fa-big fa fa-globe fa-2x"></i><a href="<%= @profile.url %>" target="_blank"><%= @profile.url %></a></li>
         <% end %>
         <% unless @profile.facebook.blank? %>
-          <li><i class="fa-big fa fa-facebook fa-2x"></i><a href="<%= @profile.facebook %>"><%= @profile.facebook %></a></li>
+          <li><i class="fa-big fa fa-facebook fa-2x"></i><a href="<%= @profile.facebook %>" target="_blank"><%= @profile.facebook %></a></li>
         <% end %>
         <% unless @profile.twitter.blank? %>
-          <li><i class="fa-big fa fa-twitter fa-2x"></i><a href="<%= @profile.twitter %>"><%= @profile.twitter %></a></li>
+          <li><i class="fa-big fa fa-twitter fa-2x"></i><a href="<%= @profile.twitter %>" target="_blank"><%= @profile.twitter %></a></li>
         <% end %>
         <% unless @profile.instagram.blank? %>
           <li><i class="fa-big fa fa-instagram fa-2x"></i><a href="<%= @profile.instagram %>"><%= @profile.instagram %></a></li>

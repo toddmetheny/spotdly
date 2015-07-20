@@ -10,6 +10,7 @@ class Profile < ActiveRecord::Base
   validates :description, length: { maximum: 100 }
 
   BUSINESS_TYPES=[['technology'], ['retail'], ['services'], ['restaurant']]
+  STRUCTURES=[['Public spaces'], ['Place / Venue / Spot (Retail Store)'], ['Truck or van'], ['Any Place / Car / Motorcycle / Bike / Costumer Service'], ['Digital']]
 
   def us_states
     [

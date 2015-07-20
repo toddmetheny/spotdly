@@ -33,23 +33,23 @@
   </div>
 
   <div class="form-group">
-    <%= f.label "Differentiator: What makes your company different?" %>
+    <%= f.label "Brain Idea: The feature, product or service that makes you unique and everyone talks about. From 2 to 4 words." %>
     <%= f.text_field :brand_idea, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <%= f.label 'Brand Slogan' %>
+    <%= f.label 'Brand Slogan: A short and striking phrase to sell your brand or idea.' %>
     <%= f.text_field :slogan, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <%= f.label 'Long Description' %>
+    <%= f.label "Long Description: It's time to talk about the history of your brand. We recommend use a paragraph from 200 to 550 characters." %>
     <%= f.text_field :long_description, class: "form-control" %>
   </div>
 
   <div class="form-group">
     <%= f.label 'Structure: Select the structure that best represents your company or personality' %><br>
-    <%= f.select :type_of_business, options_for_select(Profile::BUSINESS_TYPES), class: "form-control" %><br>
+    <%= f.select :type_of_business, options_for_select(Profile::STRUCTURES), class: "form-control" %><br>
   </div>
 
   <div class="form-group">
@@ -68,22 +68,22 @@
   </div>
 
   <div class="form-group">
-    <%= f.label 'Web Address' %>
+    <%= f.label 'Web Address - Example: https://spotdly.com' %>
     <%= f.text_field :url, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <%= f.label 'Facebook' %>
+    <%= f.label 'Facebook Address - Example: https://facebook.com/Spotdly' %>
     <%= f.text_field :facebook, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <%= f.label 'Twitter' %>
+    <%= f.label 'Twitter Address - Example: https://twitter.com/Spotdly' %>
     <%= f.text_field :twitter, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <%= f.label 'Instagram' %>
+    <%= f.label 'Instagram Address - Example: https://instagram.com/Spotdly' %>
     <%= f.text_field :instagram, class: "form-control" %>
   </div>
 
