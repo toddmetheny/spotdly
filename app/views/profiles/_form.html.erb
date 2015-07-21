@@ -1,4 +1,5 @@
-<%= form_for(@profile) do |f| %>
+<div class="container col-md-6 col-md-offset-3">
+  <%= form_for(@profile) do |f| %>
   <% if @profile.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
@@ -13,77 +14,77 @@
 
 <form>
   <div class="form-group">
-    <%= f.label "Name of Company" %>
+    <%= f.label :company_name, "Name of Company" %>
     <%= f.text_field :company_name, autofocus: true, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <%= f.label "Brand Concept: Describe your Brand concept in 100 characters" %>
+    <%= f.label :description, "Brand Concept: Describe your Brand concept in 100 characters" %>
     <%= f.text_area :description, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <%= f.label "Background Image: Background images must be in PNG, GIF, or JPG format" %>
+    <%= f.label :background_image, "Background Image: Background images must be in PNG, GIF, or JPG format" %>
     <%= f.file_field :background_image, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <%= f.label 'Logo' %>
+    <%= f.label :logo, 'Logo' %>
     <%= f.file_field :logo, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <%= f.label "Brain Idea: The feature, product or service that makes you unique and everyone talks about. From 2 to 4 words." %>
+    <%= f.label :brand_idea, "Brain Idea: The feature, product or service that makes you unique and everyone talks about. From 2 to 4 words." %>
     <%= f.text_field :brand_idea, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <%= f.label 'Brand Slogan: A short and striking phrase to sell your brand or idea.' %>
+    <%= f.label :slogan, 'Brand Slogan: A short and striking phrase to sell your brand or idea.' %>
     <%= f.text_field :slogan, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <%= f.label "Long Description: It's time to talk about the history of your brand. We recommend use a paragraph from 200 to 550 characters." %>
+    <%= f.label :long_description, "Long Description: It's time to talk about the history of your brand. We recommend use a paragraph from 200 to 550 characters." %>
     <%= f.text_field :long_description, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <%= f.label 'Structure: Select the structure that best represents your company or personality' %><br>
+    <%= f.label :type_of_business, 'Structure: Select the structure that best represents your company or personality' %><br>
     <%= f.select :type_of_business, options_for_select(Profile::STRUCTURES), class: "form-control" %><br>
   </div>
 
   <div class="form-group">
-    <%= f.label 'City' %>
+    <%= f.label :city, 'City' %>
     <%= f.text_field :city, placeholder: "City", class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <%= f.label 'State' %>
+    <%= f.label :state, 'State' %>
     <%= f.select :state, options_for_select(@profile.us_states, "FL"), class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <%= f.label 'Hashtag' %>
+    <%= f.label :hashtag, 'Hashtag' %>
     <%= f.text_field :hashtag, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <%= f.label 'Web Address - Example: https://spotdly.com' %>
+    <%= f.label :url, 'Web Address - Example: https://spotdly.com' %>
     <%= f.text_field :url, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <%= f.label 'Facebook Address - Example: https://facebook.com/Spotdly' %>
+    <%= f.label :facebook, 'Facebook Address - Example: https://facebook.com/Spotdly' %>
     <%= f.text_field :facebook, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <%= f.label 'Twitter Address - Example: https://twitter.com/Spotdly' %>
+    <%= f.label :twitter, 'Twitter Address - Example: https://twitter.com/Spotdly' %>
     <%= f.text_field :twitter, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <%= f.label 'Instagram Address - Example: https://instagram.com/Spotdly' %>
+    <%= f.label :instagram, 'Instagram Address - Example: https://instagram.com/Spotdly' %>
     <%= f.text_field :instagram, class: "form-control" %>
   </div>
 
@@ -94,3 +95,4 @@
 
 <% end %>
 </form>
+</div>
