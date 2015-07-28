@@ -39,7 +39,10 @@ GREY #cdd0d8
 
 body {
   font-family: 'ProximaNova-Thin';
-  padding-bottom: 70px;
+  background-color: #fff;
+  color: #333;
+  font-size: 13px;
+  line-height: 18px;
 }
 
 h1,
@@ -51,7 +54,12 @@ h5 {
 }
 
 h4 {
-  text-transform: uppercase;
+  font-family: 'ProximaNova-Regular';
+  letter-spacing: 1px;
+}
+
+a {
+  color: #333;
 }
 
 a:hover {
@@ -125,4 +133,8 @@ label {
 .form-control {
   max-width: 75%;
   margin: 0 auto;
+}
+
+html {
+  background-color: #f9f9f9;
 }
