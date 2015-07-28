@@ -28,6 +28,7 @@ img {
 
 img.logo-show {
   height: 150px;
+  width: 150px;
   border-radius: 50%;
   border: 5px solid #cdd0d8;
 }
@@ -45,7 +46,7 @@ img.logo-thumbnail {
   border-radius: 10px;
   height: 200px;
   margin: 1%;
-  box-shadow: 2px 2px 2px #888888;
+  box-shadow: 0px 0px 10px #888888;
 }
 
 .submit-button {
