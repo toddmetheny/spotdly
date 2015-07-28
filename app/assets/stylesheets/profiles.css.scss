@@ -63,6 +63,7 @@ img.logo-thumbnail {
 }
 
 #description-show {
+  font-family: 'ProximaNova-Regular';
   text-transform: uppercase;
   letter-spacing: 3px;
   width: 50%;
@@ -78,12 +79,12 @@ img.logo-thumbnail {
 }
 
 .match-stuff {
-  padding-top: 60px;
+  padding-top: 45px;
 }
 
 .match-button {
   background: #fef500;
-  padding: 10px 40px;
+  padding: 15px 60px;
   border-radius: 50px 50px 50px 50px;
   text-transform: uppercase;
   /*position: absolute;*/
@@ -92,6 +93,11 @@ img.logo-thumbnail {
 .match-button:hover {
   background-color: #fef500;
   color: #cdd0d8;
+}
+
+.match-button:visited {
+  background-color: #cccfd7;
+  color: #fff;
 }
 
 #company-name {
@@ -113,4 +119,5 @@ img.logo-thumbnail {
 .num-matches{
   color: #fff;
   font-weight: bold;
+  padding: 10px;
 }
