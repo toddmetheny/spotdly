@@ -24,7 +24,7 @@ end
 
 gem 'carrierwave-aws'
 gem 'rmagick'
-gem 'mini_magick', '3.8.0'
+gem 'mini_magick'
 
 gem 'devise'
 gem 'acts_as_votable'

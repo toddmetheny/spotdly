@@ -73,6 +73,19 @@ img.logo-thumbnail {
   padding-top: 50px;
   color: #fff;
   position: relative;
+  z-index: 15;
+}
+
+.dimmed:after {
+  content: " ";
+  z-index: 10;
+  display: block;
+  position: absolute;
+  height: 300px;
+  top: 70px;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.4);
 }
 
 #brand-tree {
@@ -88,7 +101,8 @@ img.logo-thumbnail {
   padding: 15px 60px;
   border-radius: 50px 50px 50px 50px;
   text-transform: uppercase;
-  /*position: absolute;*/
+  position: relative;
+  z-index: 15;
 }
 
 .match-button:hover {
@@ -121,4 +135,6 @@ img.logo-thumbnail {
   color: #fff;
   font-weight: bold;
   padding: 10px;
+  position: relative;
+  z-index: 15;
 }
