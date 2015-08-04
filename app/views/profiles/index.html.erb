@@ -2,7 +2,7 @@
   <h1 class="text-center">Discover Brands</h1>
   <div id="index-page">
      <% @profiles.each do |profile| %>
-     <div class="col-md-2 col-sm-5 col-xs-11 brand-thumbnail">
+     <div style =" background-image: url( '<%= profile.background_image.url %>'); background-size: cover; background-repeat: no-repeat;" class="col-md-2 col-sm-5 col-xs-11 brand-thumbnail">
       <%= link_to profile do %>
           <p id="description-thumbnail" class="text-center"><i class="fa fa-quote-left"></i> <%= profile.description %> <i class="fa fa-quote-right"></i></p>
           <div class="logo-index"><%= image_tag profile.logo, class: 'logo-thumbnail' %></div>

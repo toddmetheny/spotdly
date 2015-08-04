@@ -22,12 +22,11 @@ group :production do
   gem 'rails_12factor'
 end
 
-gem 'devise'
-gem 'rmagick'
-# gem 'carrierwave'
 gem 'carrierwave-aws'
-# gem 'fog-aws'
-# gem 'fog', "~> 1.3.1"
+gem 'rmagick'
+gem 'mini_magick'
+
+gem 'devise'
 gem 'acts_as_votable'
 gem 'social-share-button'
 gem 'aws-sdk'
