@@ -60,9 +60,15 @@ img.logo-thumbnail {
 
 #description-thumbnail {
   text-transform: uppercase;
-  padding-top: 5px;
+  padding: 5%;
   min-height: 100px;
+  color: #fff;
 }
+
+#company-name-thumbnail {
+  color: #fff;
+}
+
 
 #description-show {
   font-family: 'ProximaNova-Regular';
