@@ -7,11 +7,11 @@ class LogoUploader < CarrierWave::Uploader::Base
   # storage :file
   storage :aws
 
-  def default_url(*args)
-    # image = [version_name, "default.jpeg"].compact.join('_')
-    # "https://#{ENV['S3_BUCKET_NAME']}.s3.amazonaws.com/assets/#{image}"
-    false
-  end
+  # def default_url(*args)
+  #   # image = [version_name, "default.jpeg"].compact.join('_')
+  #   # "https://#{ENV['S3_BUCKET_NAME']}.s3.amazonaws.com/assets/#{image}"
+  #   false
+  # end
 
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
