@@ -31,7 +31,11 @@
 
     <div class="col-md-4 text-center">
       <p class="text-center">
-        <%= image_tag @profile.logo.to_s, class: "logo-show" %>
+        <% if @profile.logo.blank? %>
+          <%= image_tag 'default.jpg', class: "logo-show" %>
+        <% else %>
+          <%= image_tag @profile.logo.to_s, class: "logo-show" %>
+        <% end %>
       </p>
       <p>
         <h3>Brand Idea</h3>
