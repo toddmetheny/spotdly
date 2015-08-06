@@ -24,17 +24,17 @@ GREY #cdd0d8
 
 @font-face {
   font-family: "ProximaNova-Thin";
-  src: url('ProximaNova-Thin.ttf') format("truetype");
+  src: font-url('ProximaNova-Thin.ttf') format("truetype");
 }
 
 @font-face {
   font-family: "ProximaNova-Regular";
-  src: url('ProximaNova-Regular.otf');
+  src: font-url('ProximaNova-Regular.otf');
 }
 
 @font-face {
   font-family: "ProximaNova-Light";
-  src: url('ProximaNova-Light.otf');
+  src: font-url('ProximaNova-Light.otf');
 }
 
 body {
