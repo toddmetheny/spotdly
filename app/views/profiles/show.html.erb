@@ -32,7 +32,7 @@
     <div class="col-md-4 text-center">
       <p class="text-center">
         <% if @profile.logo.blank? %>
-          <%= image_tag 'default.jpg', class: "logo-show" %>
+          <%= image_tag 'put-your-logo.png', class: "logo-show" %>
         <% else %>
           <%= image_tag @profile.logo.to_s, class: "logo-show" %>
         <% end %>

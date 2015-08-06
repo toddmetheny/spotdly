@@ -4,7 +4,7 @@ module ApplicationHelper
       "background: url(#{@profile.background_image.to_s}) no-repeat fixed left top; 
        max-height: 300px;"
     else
-      "background: url('/assets/default_background.jpg') no-repeat fixed left top; 
+      "background: url('/assets/background.png') no-repeat fixed left top; 
        max-height: 300px;"
     end
   end
