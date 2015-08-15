@@ -30,3 +30,5 @@ gem 'devise'
 gem 'acts_as_votable'
 gem 'social-share-button'
 gem 'aws-sdk'
+
+gem 'jquery-turbolinks'
