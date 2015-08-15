@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150621231400) do
+ActiveRecord::Schema.define(version: 20150815030819) do
 
   create_table "comments", force: true do |t|
     t.text     "description"
@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 20150621231400) do
     t.string   "slogan"
     t.text     "long_description"
     t.string   "brand_idea"
+    t.boolean  "is_public",               default: true
   end
 
   add_index "profiles", ["cached_votes_down"], name: "index_profiles_on_cached_votes_down"

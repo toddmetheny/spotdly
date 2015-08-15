@@ -4,12 +4,17 @@ class ProfilesController < ApplicationController
   # GET /profiles
   # GET /profiles.json
   def index
-    @profiles = Profile.all
+    @profiles = Profile.where(:is_public => true)
   end
 
   # GET /profiles/1
   # GET /profiles/1.json
   def show
+    unless current_user && current_user.id == @profile.user_id
+      if @profile.is_public == false
+        redirect_to root_path
+      end
+    end
     @comment = Comment.new
   end
 
@@ -85,6 +90,6 @@ class ProfilesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def profile_params
-      params.require(:profile).permit(:company_name, :description, :user_position, :type_of_business, :category, :city, :state, :logo, :background_image, :twitter, :facebook, :instagram, :url, :long_description, :brand_idea, :slogan, :hashtag)
+      params.require(:profile).permit(:company_name, :description, :user_position, :type_of_business, :category, :city, :state, :logo, :background_image, :twitter, :facebook, :instagram, :url, :long_description, :brand_idea, :slogan, :hashtag, :is_public)
     end
 end

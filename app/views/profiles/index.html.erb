@@ -1,25 +1,24 @@
 <div>
   <h1 class="text-center">Discover Brands</h1>
   <div id="index-page">
-     <% @profiles.each do |profile| %>
-       <% if profile.background_image.blank? %>
-        <div style =" background-image: url('/assets/background.png'); background-size: cover; background-repeat: no-repeat;" class="col-md-2 col-sm-5 col-xs-11 brand-thumbnail">
-       <% else %>
-        <div style =" background-image: url( '<%= profile.background_image.url %>'); background-size: cover; background-repeat: no-repeat;" class="col-md-2 col-sm-5 col-xs-11 brand-thumbnail">
-       <% end %>
-        <%= link_to profile do %>
-          <p id="description-thumbnail" class="text-center"><i class="fa fa-quote-left"></i> <%= profile.description %> <i class="fa fa-quote-right"></i></p>
-          <% if profile.logo.blank? %>
-            <div class="logo-index"><%= image_tag 'put-your-logo.png', class: 'logo-thumbnail' %></div>
-          <% else %>
-            <div class="logo-index"><%= image_tag profile.logo, class: 'logo-thumbnail' %></div>
-          
-              <!-- <img src="default.jpeg" class='logo-thumbnail'> -->
-          <% end %>
-
-          <h4 id="company-name-thumbnail" class="text-center"><%= profile.company_name %></h4>
-        </div>
-      <% end %>
+   <% @profiles.each do |profile| %>
+     <% if profile.background_image.blank? %>
+      <div style =" background-image: url('/assets/background.png'); background-size: cover; background-repeat: no-repeat;" class="col-md-2 col-sm-5 col-xs-11 brand-thumbnail">
+     <% else %>
+      <div style =" background-image: url( '<%= profile.background_image.url %>'); background-size: cover; background-repeat: no-repeat;" class="col-md-2 col-sm-5 col-xs-11 brand-thumbnail">
      <% end %>
+      <%= link_to profile do %>
+        <p id="description-thumbnail" class="text-center"><i class="fa fa-quote-left"></i> <%= profile.description %> <i class="fa fa-quote-right"></i></p>
+        <% if profile.logo.blank? %>
+          <div class="logo-index"><%= image_tag 'put-your-logo.png', class: 'logo-thumbnail' %></div>
+        <% else %>
+          <div class="logo-index"><%= image_tag profile.logo, class: 'logo-thumbnail' %></div>
+        <% end %>
+
+        <h4 id="company-name-thumbnail" class="text-center"><%= profile.company_name %></h4>
+      </div>
+    <% end %>
+    
+   <% end %>
   </div>
 </div>
