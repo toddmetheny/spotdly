@@ -15,6 +15,10 @@
   </div>
 </div>
 
+<% if @profile.is_public == false %>
+  <div class="alert alert-info">Your page is currently private. To activate, <%= link_to "edit your profile", edit_profile_path(@profile), class: 'alert-link' %></div>
+<% end %>
+
 <div class="container">
   <div class="row profile-info">
     <div class="col-md-4">
