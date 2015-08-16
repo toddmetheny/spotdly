@@ -31,7 +31,7 @@
       <div class="field">
         <%# f.label :tos_accepted, "I agree to the terms of service." %>
         By creating an account, I agree to Spotdly's <%= link_to "terms of service", '#', data: { toggle: 'modal', target: '#myModal' } %>.
-        <%= f.check_box :terms_of_service, {}, "true", "false" %>
+        <%= f.check_box :terms_of_service %>
       </div>
 
       <!-- Modal -->
