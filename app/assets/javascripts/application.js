@@ -16,7 +16,33 @@
 //= require jquery.turbolinks
 //= require_tree .
 
-$(document).ready(function(){
+$(document).ready(function(e){
   $("[name='profile[is_public]']").bootstrapSwitch();
+
+  // console.log("before");
+  // console.log($("[name='user[tos_accepted]']").is('checked'));
+  // console.log("after");
+
+  // function validateTerms(){
+  //   if($("[name='user[tos_accepted]']").val() == "true"){
+  //     console.log("submit")
+  //   } else {
+  //     alert("Please accept Spotdly's terms of service.");
+  //     e.preventDefault();
+  //     return false
+  //     window.location.reload();
+  //   } 
+  //   // if($("#user_tos_accepted").attr('checked')){
+  //   // } else {
+  //   //   alert("Please accept Spotdly's terms of service.");
+  //   //   e.preventDefault
+  //   // } 
+  // }
+
+  // $("#new_user_submit").on("click", function(e){
+  //   e.preventDefault();
+  //   validateTerms(e);
+  //   $("[name='user[tos_accepted]']").val()
+  // })
 })
 
