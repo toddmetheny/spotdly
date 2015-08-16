@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   resources :comments
-  resources :landing
+  resources :landing, :only => ['index']
   # devise_for :users
   devise_for :users, path_names: {sign_in: "login", sign_out: "logout"}
+  # devise_for :users, :controllers => {:registrations => "registrations"}
   resources :profiles do
     member do
       put "like", to: "profiles#match"
