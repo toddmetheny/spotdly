@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :comments
-
+  resources :landing
   # devise_for :users
   devise_for :users, path_names: {sign_in: "login", sign_out: "logout"}
   resources :profiles do

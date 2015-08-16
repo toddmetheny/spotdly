@@ -1,4 +1,4 @@
-<div>
+<%= render 'layouts/header' %><div>
   <h1 class="text-center">Discover Brands</h1>
   <div id="index-page">
    <% @profiles.each do |profile| %>
@@ -18,7 +18,7 @@
         <h4 id="company-name-thumbnail" class="text-center"><%= profile.company_name %></h4>
       </div>
     <% end %>
-    
+
    <% end %>
   </div>
 </div>
