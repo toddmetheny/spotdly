@@ -1,5 +1,5 @@
 class LandingController < ApplicationController
 
-  def splash_page
+  def index
   end
 end
