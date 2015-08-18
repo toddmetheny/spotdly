@@ -50,7 +50,7 @@
 
   <div class="form-group">
     <%= f.label :type_of_business, 'Structure: Select the structure that best represents your company or personality' %><br>
-    <%= f.select :type_of_business, options_for_select(Profile::STRUCTURES), class: "form-control" %><br>
+    <%= f.select :type_of_business, options_for_select(Profile::STRUCTURES), {}, {class: "form-control"} %><br>
   </div>
 
   <div class="form-group">
@@ -60,7 +60,7 @@
 
   <div class="form-group">
     <%= f.label :state, 'State' %>
-    <%= f.select :state, options_for_select(@profile.us_states, "FL"), class: "form-control" %>
+    <%= f.select :state, options_for_select(@profile.us_states, "FL"), {}, {class: "form-control"} %>
   </div>
 
   <div class="form-group">
