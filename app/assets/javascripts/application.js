@@ -19,6 +19,8 @@
 $(document).ready(function(e){
   $("[name='profile[is_public]']").bootstrapSwitch();
 
+  Turbolinks.enableProgressBar();
+
   // console.log("before");
   // console.log($("[name='user[tos_accepted]']").is('checked'));
   // console.log("after");
