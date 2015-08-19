@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     end
   end
 
-  root 'profiles#index'
+  root 'landing#index'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
