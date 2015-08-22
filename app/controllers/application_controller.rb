@@ -13,8 +13,8 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:sign_up) << :name
     devise_parameter_sanitizer.for(:sign_up) << :terms_of_service
 
-    devise_parameter_sanitizer.for(:account_update) { |u| 
-      u.permit(:password, :password_confirmation, :current_password, :name, :email) 
+    devise_parameter_sanitizer.for(:account_update) { |u|
+      u.permit(:password, :current_password, :name, :email)
     }
   end
 end

@@ -24,11 +24,6 @@
       </div>
 
       <div class="field">
-        <%= f.label :password_confirmation %><br />
-        <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
-      </div>
-
-      <div class="field">
         <%# f.label :tos_accepted, "I agree to the terms of service." %>
         By creating an account, I agree to Spotdly's <%= link_to "terms of service", '#', data: { toggle: 'modal', target: '#myModal' } %>.
         <%= f.check_box :terms_of_service %>
