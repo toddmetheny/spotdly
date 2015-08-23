@@ -9,14 +9,67 @@
 .jumbotron {
   background: url('spotdly-loop.jpg');
   background-size: cover;
-  height: 600px;
-  color: #fff;
+  height: 800px;
+  padding-top: 10px;
 }
 
 #login-landing {
-  color: #fff;
   text-transform: uppercase;
-  border: 1px solid #fff;
-  border-radius: 2px;
-  padding: 5px
+  border: 1px solid #333;
+  border-radius: 7px;
+  padding: 5px 10px;
+}
+
+.dimmed-landing:after {
+  content: " ";
+  z-index: 10;
+  display: block;
+  position: absolute;
+  height: 800px;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.landing-jumbo-content {
+  position: relative;
+  z-index: 15;
+  padding-top: 90px;
+  border-radius: 12px;
+}
+
+.btn-landing{
+  padding: 20px 70px;
+
+}
+
+.landing-header {
+  position: relative;
+  z-index: 15;
+}
+
+input#user_name, input#user_email, input#user_password {
+  padding: 25px 70px;
+  margin: 10px
+}
+
+::-webkit-input-placeholder {
+   text-transform: uppercase;
+   letterspacing: 1px;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   text-transform: uppercase;
+   letterspacing: 1px;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   text-transform: uppercase;
+   letterspacing: 1px;
+}
+
+:-ms-input-placeholder {
+   text-transform: uppercase;
+   letterspacing: 1px;
 }
