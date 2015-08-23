@@ -9,5 +9,5 @@ class User < ActiveRecord::Base
   # validates_acceptance_of :tos_accepted, :allow_nil => false, :message => "Please accept the terms of service!", :on => :create
   # validates :terms_of_service, :acceptance => { accept: "1" }
   # validates :terms_of_service, :acceptance => true
-  validates_inclusion_of :terms_of_service, :in => [true]
+  # validates_inclusion_of :terms_of_service, :in => [true]
 end
