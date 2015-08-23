@@ -2,19 +2,37 @@
   <%= render 'landing/header' %>
     <div class="container text-center">
       <h1>Create a Better Brand</h1>
-      <h2>SPOTDLY is a unique space with tools to discover, start, improve and analyze unique concepts.</h2>
-      <p>Watch the film</p>
-      <p>Login Form</p>
-      <button class="btn btn-default">Get Started- Free</button>
+      <h2 class="col-md-6 col-md-offset-3">Join SPOTDLY to discover, start, improve, and analyze your brand for best customer.</h2>
+      <p class="col-md-12">Watch the film</p>
+
+      <div class="col-md-6 col-md-offset-3">
+        <hr>
+      </div>
+
+      <form class="form-inline col-md-12">
+        <%= form_for(:user, :url => session_path(:user)) do |f| %>
+          <%= f.text_field :name, placeholder: 'Your Name', class: 'form-control' %>
+          <%= f.text_field :email, placeholder: 'Your Email Address', class: 'form-control' %>
+          <%= f.password_field :password, placeholder: 'Create a Password', class: 'form-control' %><br>
+          <%= f.submit 'Get Started - FREE!', class: 'btn btn-default', id: "new_user_submit" %>
+        <% end %>
+      </form>
     </div>
 </div>
 
 <div class="container">
-<p> Testimonals here....</p>
+<p class="text-center">More people, more features will be available. It's time to <a href="" class="share-facebook">share on Facebook</a></p>
 </div>
 
 <div class="container text-center">
-  <h1>Showcase & manage all brands free</h1>
-    <p>Create a SPOTDLY brand page is a new way to connect brand ideas with people. No matters if they are big, medium, or small.</p>
+  <h1>Showcase & manage all brands <span>free</span></h1>
+    <p> Create a SPOTDLY brand page is a new way to connect brand ideas with people.</p>
+    <p> Define your unique brand concept that sets you apart and get feedback from other people to validate your products or services, improve your sales pitch with an organized communication and the best of all, get inspired with good business ideas</p>
+
     <%= image_tag ('showcase-brands.png'), class: "showcase-brands" %>
+    <h3>The Beginning of Everything</h3>
+
+    <button class="btn btn-default">Get Started- Free!</button>
 </div>
+
+<%= render 'landing/footer' %>
