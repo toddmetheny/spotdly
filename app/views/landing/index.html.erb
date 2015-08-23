@@ -9,14 +9,15 @@
         <hr>
       </div>
 
-      <form class="form-inline col-md-12">
-        <%= form_for(:user, :url => session_path(:user)) do |f| %>
+      <div class="form-inline col-md-12">
+
+        <%= form_for resource, :url => user_registration_path(resource) do |f| %>
           <%= f.text_field :name, placeholder: 'Your Name', class: 'form-control' %>
           <%= f.text_field :email, placeholder: 'Your Email Address', class: 'form-control' %>
           <%= f.password_field :password, placeholder: 'Create a Password', class: 'form-control' %><br>
           <%= f.submit 'Get Started - FREE!', class: 'btn btn-default', id: "new_user_submit" %>
         <% end %>
-      </form>
+      </div>
     </div>
 </div>
 
