@@ -37,6 +37,11 @@ GREY #cdd0d8
   src: font-url('ProximaNova-Light.ttf');
 }
 
+@font-face{
+  font-family: "ProximaNova-Bold";
+  src: font-url('ProximaNova-Bold.ttf')
+}
+
 body {
   font-family: 'ProximaNova-Thin';
   background-color: #fff;
