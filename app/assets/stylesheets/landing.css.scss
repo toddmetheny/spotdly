@@ -2,6 +2,22 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#landing-jumbo-heading{
+  font-size: 76px;
+}
+
+#landing-jumbo-paragraph{
+  font-size: 25px;
+  font-family: 'ProximaNova-Light';
+}
+
+#watch-film-link {
+  font-family: 'ProximaNova-Bold';
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
 .showcase-brands {
   height: 400px;
 }
@@ -72,4 +88,8 @@ input#user_name, input#user_email, input#user_password {
 :-ms-input-placeholder {
    text-transform: uppercase;
    letterspacing: 1px;
+}
+
+.terms-and-conditions{
+  text-transform: uppercase;
 }
