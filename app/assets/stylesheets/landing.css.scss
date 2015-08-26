@@ -6,16 +6,12 @@
   font-size: 76px;
 }
 
-#landing-jumbo-paragraph{
-  font-size: 25px;
-  font-family: 'ProximaNova-Light';
-}
-
 #watch-film-link {
   font-family: 'ProximaNova-Bold';
   font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 2px;
+  text-decoration: underline;
 }
 
 .showcase-brands {
@@ -34,6 +30,10 @@
   border: 1px solid #333;
   border-radius: 7px;
   padding: 5px 10px;
+}
+
+#landing-submit {
+  font-family: 'ProximaNova-Bold';
 }
 
 .dimmed-landing:after {
@@ -90,6 +90,22 @@ input#user_name, input#user_email, input#user_password {
    letterspacing: 1px;
 }
 
-.terms-and-conditions{
+#terms-and-conditions{
+  font-family: 'ProximaNova-Regular';
   text-transform: uppercase;
+  letterspacing: 2px;
+  font-size: 12px;
+}
+
+#showcase-heading{
+  text-transform: uppercase;
+  font-size: 41px;
+}
+
+#showcase-heading span{
+  background: #fef500;
+}
+
+.showcase-supporting{
+  font-size: 23px;
 }
