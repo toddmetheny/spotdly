@@ -2,6 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+hr {
+  size: 3px;
+  border-color: black;
+}
+
 #landing-jumbo-heading{
   font-size: 76px;
 }
@@ -32,10 +37,6 @@
   padding: 5px 10px;
 }
 
-#landing-submit {
-  font-family: 'ProximaNova-Bold';
-}
-
 .dimmed-landing:after {
   content: " ";
   z-index: 10;
@@ -55,9 +56,9 @@
   border-radius: 12px;
 }
 
-.btn-landing{
+.btn-landing {
   padding: 20px 70px;
-
+  font-family: 'ProximaNova-Bold';
 }
 
 .landing-header {
@@ -90,22 +91,32 @@ input#user_name, input#user_email, input#user_password {
    letterspacing: 1px;
 }
 
-#terms-and-conditions{
+#terms-and-conditions {
   font-family: 'ProximaNova-Regular';
   text-transform: uppercase;
   letterspacing: 2px;
   font-size: 12px;
 }
 
-#showcase-heading{
+#showcase-heading {
   text-transform: uppercase;
   font-size: 41px;
 }
 
-#showcase-heading span{
+#showcase-heading span {
   background: #fef500;
 }
 
-.showcase-supporting{
+.showcase-supporting {
+  font-size: 23px;
+}
+
+.fb-call-to-action {
+  font-size: 23px;
+  font-style: italic;
+}
+
+.beginning {
+  font-family: "ProximaNovaAlt-Light";
   font-size: 23px;
 }

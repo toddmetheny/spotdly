@@ -22,11 +22,14 @@
     </div>
 </div>
 
-<div class="container">
+<div class="container fb-call-to-action">
+<p class="text-center">...</p>
 <p class="text-center">More people, more features will be available. It's time to <a href="" class="share-facebook">share on Facebook</a></p>
 </div>
 
-<hr>
+<div class="container">
+  <hr>
+</div>
 
 <div class="container text-center">
   <h1 id="showcase-heading">Showcase & manage all brands <span>free</span></h1>
@@ -38,9 +41,13 @@
     </div>
     <%= image_tag ('icons-showcase.png'), class: "icons-showcase" %>
     <%= image_tag ('showcase-brands.png'), class: "showcase-brands" %>
-    <h3>The Beginning of Everything</h3>
+    <h3 class="beginning">The Beginning of Everything</h3>
 
-    <button class="btn btn-default">Get Started- Free!</button>
+    <div class="row">
+      <div class="col-md-4"><hr></div>
+      <div class="col-md-4"><button class="btn btn-default btn-landing">Get Started- Free!</button></div>
+      <div class="col-md-4"><hr></div>
+    </div>
 </div>
 
 <%= render 'landing/footer' %>

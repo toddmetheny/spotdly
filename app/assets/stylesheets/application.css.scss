@@ -37,14 +37,14 @@ GREY #cdd0d8
   src: font-url('ProximaNova-Light.ttf');
 }
 
-@font-face{
+@font-face {
   font-family: "ProximaNova-Bold";
   src: font-url('ProximaNova-Bold.ttf')
 }
 
-@font-face{
-  font-family: "ProximaNova-Alt";
-  src: font-url('ProximaNova-Alt.otf')
+@font-face {
+  font-family: "ProximaNovaAlt-Light";
+  src: font-url('ProximaNovaAlt-Light.otf')
 }
 
 body {
@@ -142,7 +142,7 @@ li.dropdown {
   color: #fef500;
 }
 
-.edit-user{
+.edit-user {
   border-style: solid;
   border-color: #fafafa;
   width: 50%;
@@ -162,7 +162,7 @@ html {
   background-color: #f9f9f9;
 }
 
-.radio-label{
+.radio-label {
   padding-right: 5px;
   padding-left: 5px;
 }
