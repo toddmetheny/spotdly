@@ -17,7 +17,7 @@
 //= require_tree .
 
 $(document).ready(function(e){
-  $("[name='profile[is_public]']").bootstrapSwitch();
+  // $("[name='profile[is_public]']").bootstrapSwitch();
 
   Turbolinks.enableProgressBar();
 
@@ -33,12 +33,12 @@ $(document).ready(function(e){
   //     e.preventDefault();
   //     return false
   //     window.location.reload();
-  //   } 
+  //   }
   //   // if($("#user_tos_accepted").attr('checked')){
   //   // } else {
   //   //   alert("Please accept Spotdly's terms of service.");
   //   //   e.preventDefault
-  //   // } 
+  //   // }
   // }
 
   // $("#new_user_submit").on("click", function(e){
@@ -47,4 +47,3 @@ $(document).ready(function(e){
   //   $("[name='user[tos_accepted]']").val()
   // })
 })
-

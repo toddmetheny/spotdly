@@ -4,7 +4,7 @@ class ProfilesController < ApplicationController
   # GET /profiles
   # GET /profiles.json
   def index
-    @profiles = Profile.where(:is_public => true)
+    @profiles = Profile.all #where(:is_public => true)
   end
 
   # GET /profiles/1
@@ -44,7 +44,7 @@ class ProfilesController < ApplicationController
       if @profile.save
         format.html { redirect_to @profile, notice: 'Profile was successfully created.' }
         format.json { render :show, status: :created, location: @profile }
-        
+
       else
         format.html { render :new }
         format.json { render json: @profile.errors, status: :unprocessable_entity }

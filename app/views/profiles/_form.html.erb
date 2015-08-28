@@ -89,14 +89,16 @@
   </div>
 
   <div class="form-group">
-    <span class="radio-label">
-      <%= label_tag :true, "Profile PUBLIC:", value: true %>
-    </span>
-    <%= f.radio_button :is_public, true, :checked => true, data: { size: 'mini' } %>
-    <span class="radio-label">
-      <%= label_tag :false, "Profile PRIVATE:", value: false %>
-    </span>
-    <%= f.radio_button :is_public, false, data: { size: 'mini' } %>
+    <!-- <span class="radio-label"> -->
+      <%# label_tag :true, "Profile PUBLIC:", value: true %>
+    <!-- </span> -->
+    <%# f.radio_button :is_public, true, :checked => true, data: { size: 'mini' } %>
+    <!-- <span class="radio-label"> -->
+      <%# label_tag :false, "Profile PRIVATE:", value: false %>
+    <!-- </span> -->
+    <%# f.radio_button :is_public, false, data: { size: 'mini' } %>
+    <%= f.label :is_public, "Profile public (anyone can view) or private (only I can view)" %>
+    <%= f.select :is_public, options_for_select([["public", true], ["private", false]]), {}, {class: "form-control"} %>
   </div>
 
   <div class="actions submit-button">
