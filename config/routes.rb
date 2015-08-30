@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   resources :comments
   resources :landing, :only => ['index']
-  # devise_for :users
+  # devise_for :users, ActiveAdmin::Devise.config
   devise_for :users, path_names: {sign_in: "login", sign_out: "logout"}
   # devise_for :users, :controllers => {:registrations => "registrations"}
   resources :profiles do
