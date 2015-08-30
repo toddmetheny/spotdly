@@ -32,3 +32,9 @@ gem 'social-share-button'
 gem 'aws-sdk'
 
 gem 'jquery-turbolinks'
+gem 'activeadmin', github: 'activeadmin'
+
+# activeadmin dependencies
+gem 'cancancan'
+gem 'draper'
+gem 'pundit'
