@@ -5,6 +5,8 @@
 hr {
   size: 3px;
   border-color: black;
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
 
 #landing-jumbo-heading{
@@ -116,7 +118,17 @@ input#user_name, input#user_email, input#user_password {
   font-style: italic;
 }
 
+a.share-facebook{
+  color: #3b5998;
+  font-weight: bold;
+}
+
 .beginning {
   font-family: "ProximaNovaAlt-Light";
   font-size: 23px;
+}
+
+.footer-links {
+  text-transform: uppercase;
+  padding-top: 15px;
 }
