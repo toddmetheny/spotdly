@@ -23,79 +23,13 @@
         <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
       </div>
 
-      <div class="field">
-        <%# f.label :tos_accepted, "I agree to the terms of service." %>
-        By creating an account, I agree to Spotdly's <%= link_to "terms of service", '#', data: { toggle: 'modal', target: '#myModal' } %>.
-        <%= f.check_box :terms_of_service %>
+      <%= render 'devise/registrations/terms_and_conditions' %>
+
+      <div class="actions">
+        <%= f.submit "Sign up", class: "btn btn-default", id: "new_user_submit" %>
       </div>
+      <% end %>
 
-      <!-- Modal -->
-      <div class="modal fade bs-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog modal-lg" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title" id="myModalLabel">SPOTDLY TERMS & CONDITIONS</h4>
-            </div>
-            <div class="modal-body">
-              <p>Welcome to www.spotdly.com (the “Website”). Spotdly, LLC. (“Spotdly”) provides its Website services to you subject to the notices, terms, and conditions set forth in this agreement (the “Agreement”). Your use of the Website is also be subject to additional terms outlined elsewhere on the website (the “Additional Terms”). When you use any Website service including, but not limited to, creating user profile(s) and posting content, you will be subject to this Agreement, together with Spotdly’s Privacy Policy. In the event that any of the terms, conditions, and notices contained herein conflict with the Additional Terms or other terms and guidelines, these terms shall control. PLEASE BE AWARE THAT THIS NOTICE DESCRIBES OUR COMPLETE TERMS OF USE. ACCESSING, BROWSING OR OTHERWISE USING THIS WEBSITE INDICATES YOUR ACCEPTANCE OF ALL THE TERMS AND CONDITIONS SET FORTH IN THIS AGREEMENT. IF YOU DO NOT AGREE TO THESE TERMS OF USE AS THEY MAY CHANGE FROM TIME TO TIME, YOU MAY NOT USE THIS WEBSITE.<p>
-                <h3>MODIFICATION</h3>
-                <p>Spotdly reserves the right to change the Website and these terms and conditions. You are responsible for regularly reviewing these terms and conditions. New versions of the terms will never apply retroactively — we’ll tell you the exact date they go into effect. If you use the Website after a change, that means you accept the new terms.</p>
-                <h3>USE OF SITE</h3>
-                <p>You represent and warrant that you are at least 18 years old or are visiting or using the Website under the supervision of a parent or guardian.</p>
-                <p>Subject to the terms and conditions of this Agreement, Spotdly hereby grants you a limited, revocable, non-transferable and non-exclusive license to access and use the Website by displaying it on your internet browser only for its intended purpose. Any breach of this Agreement shall result in the immediate revocation of the license granted in this paragraph without notice to you.</p>
-                <p>You may not reproduce, distribute, display, sell, lease, transmit, create derivative works from, translate, modify, reverse-engineer, disassemble, decompile or otherwise exploit this Website or any portion of it, including but not limited to, other users’ profiles and data, comments and posts, or other user uploaded data, unless expressly permitted by Spotdly in writing. You may not make any commercial use of any of the information provided on this Website or make any use of the Website for the benefit of another business unless explicitly permitted by Spotdly in writing. Spotdly reserves the right to refuse service, terminate accounts, and/or cancel orders and services at its sole discretion and without limitation if Spotdly believes that a user’s conduct violates this Agreement, the Privacy Policy, applicable law, or is otherwise harmful to Spotdly, its affiliates, or users.</p>
-                <p>You shall not upload to, distribute, or otherwise publish through this Website any content, information, or other material that (a) violates or infringes upon the copyrights, patents, trademarks, service marks, trade secrets, or other proprietary rights of any person; (b) is libelous, threatening, defamatory, obscene, pornographic, or could give rise to any civil or criminal liability under U.S. or international law; (c) includes any bugs, viruses, worms, trap doors, Trojan horses or other harmful code or properties; or (d) violates or breaches any agreement, contract, employment policy, or the like.</p>
-                <p>Spotdly may assign you a password and account identification enabling you to access and use certain portions of the Website. You will be deemed to be authorized to access and use the Website in a manner consistent with the terms and conditions of this Agreement each time you use your password or identification, and Spotdly shall have no obligation to investigate the authorization or source of any such access or use of this Website. YOU WILL BE SOLELY RESPONSIBLE FOR ALL ACCESS TO AND USE OF THIS WEBSITE BY ANYONE USING THE PASSWORD AND IDENTIFICATION ORIGINALLY ASSIGNED TO YOU WHETHER OR NOT SUCH ACCESS TO AND USE OF THIS WEBSITE IS ACTUALLY AUTHORIZED BY YOU, INCLUDING WITHOUT LIMITATION, ALL COMMUNICATIONS AND TRANSMISSIONS AND ALL OBLIGATIONS (INCLUDING WITHOUT LIMITATION, FINANCIAL OBLIGATIONS) INCURRED THROUGH SUCH ACCESS OR USE. You are solely responsible for protecting the security and confidentiality of the password and identification assigned to you and you shall immediately notify Spotdly of any unauthorized use of your password or identification or any other breach or threatened breach of this Website’s security.</p>
-                <h3>USER SUBMISSIONS, POSTS AND COMMENTS</h3>
-                <ol>As between you and Spotdly, you own the content and information that you submit or post to the Website and you grant Spotdly a non-exclusive, worldwide, transferable and sub-licensable license and right to use, copy, modify, distribute, publish, and process, information and content that you provide through our Website, without any further consent, notice and/or compensation to you or others. These rights are limited in the following ways:
-                  <li>You can end this license for specific content by deleting such content from the Website, or generally by closing your account, except (a) to the extent you shared it with others as part of the Website and they copied or stored it, and (b) for the reasonable time it takes to remove from backup and other systems.</li>
-                  <li>We will not include your content in advertisements for the products and services of others without your separate consent. However, we have the right, without compensation to you or others, to serve ads near your content and information, and your comments on sponsored content may be visible.</li>
-                  <li>We will get your consent if we want to give others the right to publish your posts beyond the Website. However, other members and/or visitors may access and share your content and information, consistent with your settings and degree of connection with them.</li>
-                  <li>While we may edit and make formatting changes to your content (such as translating it, modifying the size, layout or file type or removing metadata), we will not modify the meaning of your expression.</li>
-                  <li>You may choose to make your content and information available to others.</li>
-                </ol>
-                <p>By submitting suggestions or other feedback regarding our Website to Spotdly, you agree that Spotdly can use and share such feedback for any purpose without compensation to you.</p>
-                <p>You agree to only provide content or information that does not violate the law nor any other person’s rights (e.g., without violating any intellectual property rights or breaching a contract). You also agree that your profile information will be truthful.</p>
-                <p>Content provided on the Website is solely for informational purposes. Submissions or opinions expressed on the Website in user posts or submissions are that of the individual or entity expressing such submission or opinion and may not reflect the opinions of Spotdly.</p>
-                <h3>INTELLECTUAL PROPERTY</h3>
-                <p>All graphics, images, videos, icons, and text on the Website (collectively, the “Content”), belongs exclusively to Spotdly or its Content suppliers. All software used on this Website (the “Software”) is the property of Spotdly or its Software suppliers. U.S. and international copyright laws protect the Content and Software. The use of any of Spotdly’s trademarks or service marks without Spotdly’s express written consent is strictly prohibited. You may not use Spotdly’s trademarks or service marks in connection with any product or service that is in any way likely to cause confusion or harm to Spotdly.</p>
-                <h3>TERMINATION AND EFFECT OF TERMINATION</h3>
-                <p>In addition to any other legal or equitable remedies, Spotdly may, without notice to you, terminate this Agreement or revoke any or all of your rights granted under it. The provisions relating to Intellectual Property, Disclaimer, Limitation of Liability, Applicable Laws, Indemnification, and Severability shall survive any termination.</p>
-                <h3>INTERNATIONAL ACCESS</h3>
-                <p>This Website may be accessed from outside the United States, and may contain products or references to products that are not available outside of the United States. Any such references do not imply that such products will be made available outside the United States. Users who access or use the Website from outside the United States are responsible for complying with their local laws and regulations.</p>
-                <h3>DISCLAIMER</h3>
-                <p>THIS WEBSITE IS PRESENTED “AS IS” AND MAY INCLUDE INACCURACIES, MISTAKES OR TYPOGRAPHICAL ERRORS. SPOTDLY DOES NOT WARRANT THAT THE CONTENT WILL BE UNINTERRUPTED OR ERROR FREE NOR DOES SPOTDLY MAKE ANY WARRANTY AS TO THE RESULTS THAT MAY BE OBTAINED FROM USE OF THIS WEBSITE, OR AS TO THE ACCURACY, RELIABILITY OR CONTENT OF ANY INFORMATION, SERVICE, OR MERCHANDISE PROVIDED THROUGH THIS WEBSITE. PRICE INFORMATION IS SUBJECT TO CHANGE WITHOUT NOTICE. IT IS YOUR RESPONSIBILITY TO EVALUATE THE ACCURACY AND COMPLETENESS OF ALL INFORMATION, OPINIONS AND OTHER MATERIAL ON THIS WEBSITE OR ANY SITES WITH WHICH IT IS LINKED.</p>
-                <p>SPOTDLY DOES NOT WARRANT OR MAKE ANY REPRESENTATIONS REGARDING THE WEBSITE CONTENT OR THE RESULTS OF USE OF THE MATERIALS AVAILABLE ON THIS WEBSITE. SPOTDLY (INCLUDING ITS AFFILIATES, THIRD PARTY CONTENT PROVIDERS, MERCHANTS, SPONSORS, LICENSORS AND THE LIKE, AND THEIR RESPECTIVE DIRECTORS, OFFICERS AND EMPLOYEES) MAKES NO REPRESENTATIONS OR WARRANTIES OF ANY KIND WHATSOEVER, EXPRESS OR IMPLIED, IN CONNECTION WITH THESE TERMS AND CONDITIONS OR THE WEBSITE, ITS CONTENT, OR ANY OTHER PORTION OF THE WEBSITE, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, NON-INFRINGEMENT, TITLE OR FITNESS FOR A PARTICULAR PURPOSE, OR WARRANTIES ABOUT THE ACCURACY, RELIABILITY, COMPLETENESS, OR TIMELINESS OF THE WEBSITE, SERVICES, GRAPHICS, OR LINKS UNLESS SUCH REPRESENTATIONS AND WARRANTIES ARE NOT LEGALLY EXCLUDABLE UNDER APPLICABLE LAW.</p>
-                <h3>LIMITATION OF LIABILITY; RISK OF LOSS</h3>
-                <p>IN USING THIS WEBSITE, YOU AGREE THAT SPOTDLY WILL NOT BE RESPONSIBLE OR LIABLE, UNDER ANY CIRCUMSTANCES, FOR ANY (a) INTERRUPTION OF BUSINESS; (b) ACCESS DELAYS OR ACCESS INTERRUPTIONS TO THE WEBSITE; (c) DATA NON-DELIVERY, MISDELIVERY, CORRUPTION, DESTRUCTION OR OTHER MODIFICATION; (d) LOSS OR DAMAGES OF ANY SORT INCURRED AS A RESULT OF DEALINGS WITH OR THE PRESENCE OF OFF-WEBSITE LINKS ON THE WEBSITE; (e) COMPUTER VIRUSES, SYSTEM FAILURE OR MALFUNCTION WHICH MAY OCCUR IN CONNECTION WITH YOUR USE OF THE WEBSITE, INCLUDING DURING HYPERLINK TO OR FROM THIRD PARTY WEBSITES; OR (f) EVENTS BEYOND SPOTDLY’S REASONABLE CONTROL.</p>
-                <p>FURTHER, TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, REGARDLESS OF THE FORM OF ACTION, WHETHER IN CONTRACT, TORT OR OTHERWISE, SPOTDLY WILL NOT BE LIABLE FOR ANY DAMAGES OF ANY KIND ARISING FROM THE USE OF THIS WEBSITE, INCLUDING, BUT NOT LIMITED TO INDIRECT, INCIDENTAL, PUNITIVE, EXEMPLARY, SPECIAL OR CONSEQUENTIAL DAMAGES. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, SPOTDLY’S TOTAL LIABILITY TO YOU FOR ANY DAMAGES (REGARDLESS OF THE FOUNDATION FOR THE ACTION) SHALL NOT EXCEED IN THE AGGREGATE THE AMOUNT OF FEES ACTUALLY PAID BY YOU TO SPOTDLY THROUGH THE WEBSITE DURING THE MONTH IMMEDIATELY PRECEDING THE ACT ALLEGEDLY GIVING RISE TO SPOTDLY’S LIABILITY.</p>
-                <h3>LINKS</h3>
-                <p>This website may contain links to other sites on the Internet that are owned and operated by third parties. You acknowledge that Spotdly is not responsible for the operation of or content located on or through any such website.</p>
-                <h3>APPLICABLE LAW</h3>
-                <p>The laws of the State of Florida shall govern this Agreement. Any dispute relating in any way to your visit to or use of the Website shall be submitted to confidential arbitration in Miami-Dade County, Florida, except in regards to issues regarding violations of Spotdly’s intellectual property rights, for which Spotdly may seek relief from any state or federal court of competent jurisdiction in the State of Florida. By using the Website, you hereby consent to, and waive all defenses of lack of personal jurisdiction and forum non-conveniences with respect to venue and jurisdiction in the state and federal courts of the State of Florida. Arbitration under this Agreement shall be conducted pursuant to the Commercial Arbitration Rules then prevailing at the American Arbitration Association. The arbitrator’s award shall be final and binding and may be entered as a judgment in any court of competent jurisdiction. To the fullest extent permitted by applicable law, no arbitration under this Agreement shall be joined to an arbitration involving any other party subject to this Agreement, whether through class action proceedings or otherwise. In using this Website, you further agree that regardless of any statute or law to the contrary, any claim or cause of action arising out of, related to, or connected with the use of this Website or Agreement must be filed within one (1) year after such claim or cause of action arose or be forever banned.</p>
-                <p>Further, by using this Website you agree that Spotdly’s remedy at law for any actual or threatened breach of this Agreement would be inadequate. As such, Spotdly shall be entitled to specific performance, injunctive relief, or both, in addition to any damages that Spotdly may be entitled to recover, along with reasonable expenses incurred by Spotdly for any form of dispute resolution, including, without limitation, reasonable attorneys’ fees. No right or remedy of Spotdly shall be exclusive of any other, whether at law or in equity, including without limitation damages, injunctive relief, attorneys’ fees and expenses. No instance of waiver by Spotdly of its rights or remedies under this Agreement shall imply any obligation to grant any similar, future, or other waiver.</p>
-                <h3>INDEMNIFICATION</h3>
-                <p>In using this Website, you agree to defend, indemnify and hold harmless Spotdly, and its officers, directors, and employees from any and all claims, liabilities, costs, and expenses, including, but not limited to, attorneys’ fees and expenses, arising in any way from or in connection with your use of this Website or any service available on or through this Website, including the uploading, posting, e-mailing, transmission, or infringement of any Content or other materials by you or users authorized by you, or any violation of this Agreement, our Privacy Policy, or any other policy posted from time to time on the Website applicable to your use of the Website.</p>
-                <h3>SEVERABILITY</h3>
-                <p>If any of the provisions of this Agreement shall be deemed void, invalid, or unenforceable for any reason, that condition shall be deemed several and shall not affect the validity and enforceability of the remaining provision.</p>
-                <h3>SPOTDLY ADDRESS</h3>
-                <p>Please send any questions or comments regarding this Website to: hello@spotdly.com or
-                  Spotdly, LLC. 8150 NW 53RD ST.
-                  DORAL, FL 33166</p>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="actions">
-            <%= f.submit "Sign up", class: "btn btn-default", id: "new_user_submit" %>
-          </div>
-          <% end %>
-
-          <%= render "devise/shared/links" %>
-        </div>
-      </div>
+      <%= render "devise/shared/links" %>
+    </div>
+  </div>
