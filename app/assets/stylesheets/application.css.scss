@@ -153,7 +153,7 @@ label {
   font-family: 'ProximaNova-Regular';
 }
 
-.form-control {
+.devise-new {
   max-width: 75%;
   margin: 0 auto;
 }
@@ -165,4 +165,8 @@ html {
 .radio-label {
   padding-right: 5px;
   padding-left: 5px;
+}
+
+#forgot-password-email {
+  padding: 0px;
 }
