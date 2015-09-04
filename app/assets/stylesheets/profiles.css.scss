@@ -10,6 +10,13 @@ h3 {
   text-transform: uppercase;
 }
 
+h3.text-center.private-account {
+  margin: 0;
+  padding-top: 10px;
+  background-color: #fef500;
+  height: 40px;
+}
+
 .background-image-thumbnail {
   position: static;
   width: 200px;
@@ -35,6 +42,8 @@ img.logo-show {
 
 img.logo-thumbnail {
   border: 2px solid #fff;
+  position: relative;
+  z-index: 15;
 }
 
 .logo-index {
@@ -42,8 +51,7 @@ img.logo-thumbnail {
 }
 
 .brand-thumbnail {
- /* border: 1px solid black;*/
-  border-radius: 10px;
+  border-radius: 7px;
   height: 200px;
   margin: 1%;
   box-shadow: 0px 0px 10px #888888;
@@ -63,10 +71,14 @@ img.logo-thumbnail {
   padding: 5%;
   min-height: 100px;
   color: #fff;
+  position: relative;
+  z-index: 15;
 }
 
 #company-name-thumbnail {
   color: #fff;
+  position: relative;
+  z-index: 15;
 }
 
 
@@ -85,16 +97,28 @@ img.logo-thumbnail {
 
 .dimmed:after {
   content: " ";
-  z-index: 10;
+  z-index: 1;
   display: block;
   position: absolute;
   height: 300px;
   top: 75px;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.4);
 }
 
+.brand-thumbnail-dimmed:after{
+  content: " ";
+  z-index: 10;
+  display: block;
+  position: absolute;
+  height: 200px;
+  top: 0px;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 7px;
+}
 
 #brand-tree {
   text-transform: uppercase;
