@@ -3,11 +3,11 @@
     <div class="container text-center landing-jumbo-content">
       <h1 id="landing-jumbo-heading">Create a Better Brand.</h1>
       <h2 class="col-md-6 col-md-offset-3" id="landing-jumbo-paragraph">Join SPOTDLY to discover, start, improve, and analyze your brand for best customer.</h2>
-      <a href="#" class="col-md-12" id="watch-film-link">Watch the film</a>
-
-      <div class="col-md-8 col-md-offset-2">
         <hr>
-      </div>
+    </div>
+
+    <%= render 'landing/video_modal' %>
+
 
       <div class="form-inline col-md-12">
         <%= form_for resource, :url => user_registration_path(resource) do |f| %>
