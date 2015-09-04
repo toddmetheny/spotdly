@@ -4,9 +4,9 @@
    <% @profiles.each do |profile| %>
     <% if profile.is_public || current_user && !profile.is_public && profile.user_id == current_user.id %>
      <% if profile.background_image.blank? %>
-      <div style =" background-image: url('/assets/background.png'); background-size: cover; background-repeat: no-repeat;" class="col-md-2 col-sm-5 col-xs-11 brand-thumbnail">
+      <div style =" background-image: url('/assets/background.png'); background-size: cover; background-repeat: no-repeat;" class="col-md-2 col-sm-5 col-xs-11 brand-thumbnail brand-thumbnail-dimmed">
      <% else %>
-      <div style =" background-image: url( '<%= profile.background_image.url %>'); background-size: cover; background-repeat: no-repeat;" class="col-md-2 col-sm-5 col-xs-11 brand-thumbnail">
+      <div style =" background-image: url( '<%= profile.background_image.url %>'); background-size: cover; background-repeat: no-repeat;" class="col-md-2 col-sm-5 col-xs-11 brand-thumbnail brand-thumbnail-dimmed">
      <% end %>
       <%= link_to profile do %>
         <p id="description-thumbnail" class="text-center"><i class="fa fa-quote-left"></i> <%= profile.description %> <i class="fa fa-quote-right"></i></p>
