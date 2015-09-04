@@ -3,25 +3,25 @@
     <div class="container text-center landing-jumbo-content">
       <h1 id="landing-jumbo-heading">Create a Better Brand.</h1>
       <h2 class="col-md-6 col-md-offset-3" id="landing-jumbo-paragraph">Join SPOTDLY to discover, start, improve, and analyze your brand for best customer.</h2>
-        <hr>
     </div>
 
     <%= render 'landing/video_modal' %>
 
 
-      <div class="form-inline col-md-12">
+      <div class="form-inline col-md-12 landing-form">
         <%= form_for resource, :url => user_registration_path(resource) do |f| %>
           <%= f.text_field :name, placeholder: 'Your Name', class: 'form-control' %>
           <%= f.text_field :email, placeholder: 'Your Email Address', class: 'form-control' %>
           <%= f.password_field :password, placeholder: 'Create a Password', class: 'form-control' %><br>
           <%= f.submit 'Get Started - FREE!', class: 'btn btn-default btn-landing', id: "landing-submit" %>
         <% end %>
+
+        <div>
+          <p class="col-md-4 col-md-offset-4"id="terms-and-conditions">Creating an account means you agree with Spotdly's terms and <a href data-toggle="modal" data-target=".bs-example-modal-lg">data use policy</a>.</p>
+        </div>
       </div>
 
-      <div>
-        <p class="col-md-4 col-md-offset-4"id="terms-and-conditions">Creating an account means you agree with Spotdly's terms and <a href data-toggle="modal" data-target=".bs-example-modal-lg">data use policy</a>.</p>
-      </div>
-      <%# render 'devise/registrations/terms_and_conditions' %>
+
 
     </div>
 </div>

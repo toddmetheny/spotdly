@@ -15,15 +15,20 @@ hr {
 
 #video-modal{
   position: relative;
-  z-index: 100;
+  z-index: 15;
 }
 
-#watch-film-link {
+.watch-film-link {
   font-family: 'ProximaNova-Bold';
   font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 2px;
   text-decoration: underline;
+}
+
+.landing-form {
+  position: relative;
+  z-index: 15;
 }
 
 .showcase-brands {
