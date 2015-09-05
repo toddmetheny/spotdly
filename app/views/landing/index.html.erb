@@ -4,35 +4,29 @@
       <h1 id="landing-jumbo-heading">Create a Better Brand.</h1>
       <h2 class="col-md-6 col-md-offset-3" id="landing-jumbo-paragraph">Join SPOTDLY to discover, start, improve, and analyze your brand for best customer.</h2>
     </div>
-
-    <%= render 'landing/video_modal' %>
-
-
-      <div class="form-inline col-md-12 landing-form" role="form">
-        <%= form_for resource, :url => user_registration_path(resource) do |f| %>
-          <span class="center">
-          <%= f.text_field :name, placeholder: 'Your Name', class: 'form-control' %>
-          <%= f.text_field :email, placeholder: 'Your Email Address', class: 'form-control' %>
-          <%= f.password_field :password, placeholder: 'Create a Password', class: 'form-control' %><br>
-          </span>
-          <div class="col-md-12 col-md-offset-4">
-            <%= f.submit 'Get Started - FREE!', class: 'btn btn-default btn-landing', id: "landing-submit" %>
-          </div>
-        <% end %>
-
-        <div>
-          <p class="col-md-4 col-md-offset-4 text-center"id="terms-and-conditions">Creating an account means you agree with Spotdly's terms and <a href data-toggle="modal" data-target=".bs-example-modal-lg">data use policy</a>.</p>
-        </div>
+  <%= render 'landing/video_modal' %>
+  <div class="form-inline col-md-12 landing-form" role="form">
+    <%= form_for resource, :url => user_registration_path(resource) do |f| %>
+      <span class="center">
+      <%= f.text_field :name, placeholder: 'Your Name', class: 'form-control' %>
+      <%= f.text_field :email, placeholder: 'Your Email Address', class: 'form-control' %>
+      <%= f.password_field :password, placeholder: 'Create a Password', class: 'form-control' %><br>
+      </span>
+      <div class="col-md-12">
+        <div class="col-md-4"></div>
+        <div class="col-md-4"><%= f.submit 'Get Started - FREE!', class: 'btn btn-default btn-landing', id: "landing-submit" %></div>
+        <div class="col-md-4"></div>
       </div>
-
-
-
-    <!-- </div> -->
+    <% end %>
+    <div>
+      <p class="col-md-4 col-md-offset-4 text-center"id="terms-and-conditions">Creating an account means you agree<br>with Spotdly's terms and <a href data-toggle="modal" data-target=".bs-example-modal-lg">data use policy</a>.</p>
+    </div>
+  </div>
 </div>
 
 <div class="container fb-call-to-action">
-<p class="text-center">...</p>
-<p class="text-center">More people, more features will be available. It's time to <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.facebook.com/spotdly" class="share-facebook" target="blank">share on Facebook</a></p>
+  <p class="text-center">...</p>
+  <p class="text-center">More people, more features will be available. It's time to <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.facebook.com/spotdly" class="share-facebook" target="blank">share on Facebook</a></p>
 </div>
 
 <div class="container">
@@ -40,7 +34,7 @@
 </div>
 
 <div class="container text-center">
-  <h1 id="showcase-heading">Showcase & manage all brands <span>free</span></h1>
+  <h1 id="showcase-heading">Showcase &amp; manage all brands <span>free</span></h1>
     <div class="showcase-supporting">
       <p> Create a SPOTDLY brand page is a new way to connect brand ideas with people.</p>
       <p> Define your unique brand concept that sets you apart and get feedback from other people to validate your<br>
