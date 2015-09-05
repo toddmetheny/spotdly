@@ -1,7 +1,7 @@
 <nav class="navbar navbar-default">
   <div class="container">
     <div class="row landing-header">
-      <%= link_to(image_tag("logo.png"), profiles_path, id: 'landing-logo', class: 'col-md-1 col-md-offset-6') %>
+      <%= link_to(image_tag("logo.png"), profiles_path, id: 'landing-logo', class: 'center') %>
       <div class="dropdown col-md-3 col-md-offset-2">
         <ul class="list-unstyled list-inline">
           <li class="dropdown navbar-right">
@@ -16,14 +16,12 @@
                     </li>
                   <% end %>
                 <% end %>
-                  <li><%= link_to 'Edit Account', edit_user_registration_path %>
-                  </li>
-                  <li><%= link_to "Logout", destroy_user_session_path, method: :delete %>
-                  </li>
+                  <li><%= link_to 'Edit Account', edit_user_registration_path %></li>
+                  <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+              </ul>
             <% else %>
               <ul class="list-unstyled list-inline">
                 <li><%= link_to "Login", new_user_session_path, id: "login-landing" %></li>
-              </ul>
               </ul>
             <% end %>
           </li>
