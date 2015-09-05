@@ -13,12 +13,22 @@ hr {
   font-size: 76px;
 }
 
-#watch-film-link {
+#video-modal{
+  position: relative;
+  z-index: 15;
+}
+
+.watch-film-link {
   font-family: 'ProximaNova-Bold';
   font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 2px;
   text-decoration: underline;
+}
+
+.landing-form {
+  position: relative;
+  z-index: 15;
 }
 
 .showcase-brands {
@@ -131,4 +141,12 @@ a.share-facebook{
 .footer-links {
   text-transform: uppercase;
   padding-top: 15px;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  text-align: center;
+  display: inline-block;
 }
