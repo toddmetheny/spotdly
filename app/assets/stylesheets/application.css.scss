@@ -78,6 +78,10 @@ a:hover {
   color: #cdd0d8;
 }
 
+a:focus {
+  outline: none;
+}
+
 .btn {
   background-color: #fef500;
   color: #000;
