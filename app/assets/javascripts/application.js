@@ -21,6 +21,15 @@ $(document).ready(function(e){
 
   Turbolinks.enableProgressBar();
 
+  $(".js-hundred-countdown").on("input", function() {
+    $("span").text(100 - $(this).val().length);
+    if($(this).val().length > 100){
+      $(".no-color").addClass('hundred-color');
+    } else if($(this).val().length < 100){
+      $(".no-color").removeClass('hundred-color');
+    }
+  });
+
   // console.log("before");
   // console.log($("[name='user[tos_accepted]']").is('checked'));
   // console.log("after");
