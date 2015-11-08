@@ -25,7 +25,7 @@ $(document).ready(function(e){
     $("span").text(100 - $(this).val().length);
     if($(this).val().length > 100){
       $(".no-color").addClass('hundred-color');
-    } else if($(this).val().length < 100){
+    } else if($(this).val().length < 100 || $(this).val().length == 100){
       $(".no-color").removeClass('hundred-color');
     }
   });
