@@ -1,0 +1,9 @@
+<div class="">
+  <h3 class="text-center">User Emails</h3>
+
+  <%= User.find_each do |user| %>
+    <div class="text-center">
+      <%= user.email %>
+    </div>
+  <% end %>
+</div>

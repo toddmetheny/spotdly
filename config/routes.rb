@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get '/admin', to: 'admin#admin', as: 'admin'
+
   resources :comments
   resources :landing, :only => ['index']
   # devise_for :users
