@@ -1,4 +1,8 @@
 <div class="">
+  <h5>Total Users: <%= User.count %></h5>
+  <h5>Last Registered User: <%= User.last.email %></h5>
+</div>
+<div class="">
   <h3 class="text-center">User Emails</h3>
 
   <%= User.find_each do |user| %>
