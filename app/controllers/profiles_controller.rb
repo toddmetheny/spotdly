@@ -33,6 +33,9 @@ class ProfilesController < ApplicationController
 
   # GET /profiles/1/edit
   def edit
+    unless current_user && (current_user.id == @profile.user_id || current_user.admin)
+      redirect_to root_path
+    end
   end
 
   # POST /profiles
