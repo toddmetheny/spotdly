@@ -89,6 +89,13 @@
     <%= f.text_field :instagram, class: "form-control" %>
   </div>
 
+  <% if current_user && current_user.admin %>
+    <div class="form-group">
+      <%= f.label :tag_list, 'Add this brand to a category' %>
+      <%= f.text_field :tag_list, placeholder: 'separate multiple tags by commas', class: "form-control" %>
+    </div>
+  <% end %>
+
   <div class="form-group">
     <!-- <span class="radio-label"> -->
       <%# label_tag :true, "Profile PUBLIC:", value: true %>

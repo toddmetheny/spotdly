@@ -171,6 +171,23 @@ img.logo-thumbnail {
   z-index: 15;
 }
 
+.add-to-token{
+	overflow: hidden;
+	height: auto !important;
+	height: 15px;
+	margin: 3px;
+	padding: 1px 3px;
+	background-color: #eff2f7;
+	color: #000;
+	cursor: default;
+	border: 1px solid #ccd5e4;
+	font-size: 11px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	/*float: left;*/
+	white-space: nowrap;
+}
 // .modal-backdrop {
 //     z-index: 1020;
 // }

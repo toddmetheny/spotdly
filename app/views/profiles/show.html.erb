@@ -82,6 +82,10 @@
       <p>
         Share this:<%= social_share_button_tag(@profile.company_name) %>
       </p>
+
+      <p style="float:left;">
+        Category: <span class="tag-list-map add-to-token"><%= raw @profile.tag_list.map { |t| link_to t, tag_path(t)}.join(' ') %></span>
+      </p>
     </div>
 
     <div class="col-md-12">
@@ -104,6 +108,3 @@
    </div>
   </div>
 </div>
-
-
-

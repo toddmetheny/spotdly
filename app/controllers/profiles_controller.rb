@@ -4,7 +4,11 @@ class ProfilesController < ApplicationController
   # GET /profiles
   # GET /profiles.json
   def index
-    @profiles = Profile.all #where(:is_public => true)
+    if params[:tag]
+      @profiles = Profile.tagged_with(params[:tag].downcase)
+    else
+      @profiles = Profile.all #where(:is_public => true)
+    end
   end
 
   # GET /profiles/1
@@ -29,6 +33,9 @@ class ProfilesController < ApplicationController
 
   # GET /profiles/1/edit
   def edit
+    unless current_user && (current_user.id == @profile.user_id || current_user.admin)
+      redirect_to root_path
+    end
   end
 
   # POST /profiles
@@ -90,6 +97,6 @@ class ProfilesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def profile_params
-      params.require(:profile).permit(:company_name, :description, :user_position, :type_of_business, :category, :city, :state, :logo, :background_image, :twitter, :facebook, :instagram, :url, :long_description, :brand_idea, :slogan, :hashtag, :is_public)
+      params.require(:profile).permit(:company_name, :description, :user_position, :type_of_business, :category, :city, :state, :logo, :background_image, :twitter, :facebook, :instagram, :url, :long_description, :brand_idea, :slogan, :hashtag, :is_public, :tag_list)
     end
 end

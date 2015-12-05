@@ -3,6 +3,7 @@ class Profile < ActiveRecord::Base
   mount_uploader :background_image, BackgroundImageUploader
 
   acts_as_votable
+  acts_as_taggable
 
   belongs_to :user
 
