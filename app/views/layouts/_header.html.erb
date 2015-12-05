@@ -21,7 +21,7 @@
             </a>
             <ul class="dropdown-menu nav navbar-nav navbar-right">
               <% unless @profile.nil? %>
-                <% if current_user && @profile.user_id == current_user.id && @profile.id %>
+                <% if current_user && (@profile.user_id == current_user.id || current_user.admin) && @profile.id %>
                   <li><%= link_to 'Edit Brand Page', edit_profile_path(@profile) %>
                   </li>
                 <% end %>
