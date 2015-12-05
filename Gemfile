@@ -22,13 +22,17 @@ group :production do
   gem 'rails_12factor'
 end
 
+# stuff for images
 gem 'carrierwave-aws'
 gem 'rmagick'
 gem 'mini_magick'
-
-gem 'devise'
-gem 'acts_as_votable'
-gem 'social-share-button'
 gem 'aws-sdk'
 
+# auth
+gem 'devise'
+
+# misc
+gem 'acts_as_votable'
+gem 'social-share-button'
 gem 'jquery-turbolinks'
+gem 'acts_as_taggable_on'

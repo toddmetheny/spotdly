@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     end
   end
 
+  get 'tags/:tag', to: 'profiles#index', as: :tag
   root 'landing#index'
 
 
