@@ -4,7 +4,11 @@ class ProfilesController < ApplicationController
   # GET /profiles
   # GET /profiles.json
   def index
-    @profiles = Profile.all #where(:is_public => true)
+    if params[:tag]
+      @profiles = Profile.tagged_with(params[:tag].downcase)
+    else
+      @profiles = Profile.all #where(:is_public => true)
+    end
   end
 
   # GET /profiles/1
