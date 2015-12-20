@@ -13,6 +13,10 @@ class Profile < ActiveRecord::Base
   BUSINESS_TYPES=[['technology'], ['retail'], ['services'], ['restaurant']]
   STRUCTURES=[['Public spaces'], ['Place / Venue / Spot (Retail Store)'], ['Truck or van'], ['Any Place / Car / Motorcycle / Bike / Costumer Service'], ['Digital']]
 
+  def self.list_categories
+    ActsAsTaggableOn::Tag.all
+  end
+
   def us_states
     [
       ['Alabama', 'AL'],

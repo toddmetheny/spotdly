@@ -5,6 +5,9 @@ gem 'rails', '4.1.8'
 
 group :development do
   gem 'sqlite3'
+  gem 'better_errors'
+  gem 'byebug'
+  gem 'binding_of_caller'
 end
 
 gem 'sass-rails', '~> 4.0.3'

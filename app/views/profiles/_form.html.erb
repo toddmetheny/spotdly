@@ -94,6 +94,11 @@
       <%= f.label :tag_list, 'Add this brand to a category' %>
       <%= f.text_field :tag_list, placeholder: 'separate multiple tags by commas', class: "form-control" %>
     </div>
+  <% else %>
+    <div class="form-group">
+      <%= f.label :tag_list %>
+      <%= f.select :tag_list, options_for_select(Profile.list_categories) %>
+    </div>
   <% end %>
 
   <div class="form-group">
