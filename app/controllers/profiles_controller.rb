@@ -9,6 +9,7 @@ class ProfilesController < ApplicationController
     else
       @profiles = Profile.all #where(:is_public => true)
     end
+    @tags = ActsAsTaggableOn::Tag.order("name")
   end
 
   # GET /profiles/1

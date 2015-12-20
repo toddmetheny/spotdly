@@ -1,5 +1,14 @@
 <%= render 'layouts/header' %><div>
   <h1 class="text-center">Discover Brands</h1>
+
+  <div class="text-center" >
+    <% @tags.each do |tag| %>
+      <span data-toggle="tooltip" title="sort by group">
+        <%= link_to tag.name, tag_path(:tag => tag.name) %>
+      </span>
+    <% end %>
+  </div>
+
   <div id="index-page">
    <% @profiles.each do |profile| %>
     <% if profile.is_public || current_user && !profile.is_public && profile.user_id == current_user.id %>

@@ -97,7 +97,7 @@
   <% else %>
     <div class="form-group">
       <%= f.label :tag_list %>
-      <%= f.select :tag_list, options_for_select(Profile.list_categories) %>
+      <%= f.select :tag_list, options_for_select(Profile.list_categories),{}, {class: "form-control"} %>
     </div>
   <% end %>
 

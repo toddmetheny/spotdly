@@ -30,6 +30,10 @@ $(document).ready(function(e){
     }
   });
 
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+  })
+
   // console.log("before");
   // console.log($("[name='user[tos_accepted]']").is('checked'));
   // console.log("after");
